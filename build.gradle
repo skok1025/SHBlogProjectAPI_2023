@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'com.cafe24'
+group = 'com.cafe24.shkim30'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -29,9 +29,6 @@ dependencies {
 	// https://mvnrepository.com/artifact/commons-codec/commons-codec
 	implementation group: 'commons-codec', name: 'commons-codec', version: '1.9'
 
-    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.5.0'
-    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.5.0'
-
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -39,6 +36,9 @@ dependencies {
 	testImplementation("org.junit.vintage:junit-vintage-engine") {
 		exclude group: "org.hamcrest", module: "hamcrest-core"
 	}
+
+	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
 }
 
 tasks.named('test') {

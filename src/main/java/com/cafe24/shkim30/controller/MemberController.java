@@ -23,10 +23,7 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    @GetMapping("")
-    public String test() {
-        return "test";
-    }
+
 
     @PostMapping("")
     public ResponseEntity<JSONResult> addMember(@RequestBody @Valid MemberDTO memberdto, BindingResult bindingResult) {
