@@ -44,9 +44,9 @@ public class MemberRepository {
      * @param name 검색이름
      * @return 회원 리스트
      */
-    public List<Member> findByName(String name) {
-        return em.createQuery("select m from Member m where m.name = :name", Member.class)
-                .setParameter("name", name)
+    public List<Member> findById(String memberId) {
+        return em.createQuery("select m from Member m where m.memberId = :memberId", Member.class)
+                .setParameter("memberId", memberId)
                 .getResultList();
     }
 }

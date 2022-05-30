@@ -34,13 +34,15 @@ public class MemberService {
         return memberNo > 0 ? memberdto : null;
     }
 
-    public List<MemberDTO> findMemberByMemberName(String name) {
+    public List<MemberDTO> findMemberByMemberId (String memberId) {
         List<MemberDTO> result = new ArrayList<>();
         List<Member> findbyName =
-                memberRepository.findByName(libEncrypt.encrypt_AES(name.getBytes(),libEncrypt.AES_KEY.getBytes()));
+                memberRepository.findById(memberId);
 
         for (Member m :findbyName) {
             MemberDTO memberDTO = new MemberDTO();
+
+            memberDTO.setNo(m.getNo());
             memberDTO.setMemberId(m.getMemberId());
             memberDTO.setPassword(m.getPassword());
             memberDTO.setName(libEncrypt.decrypt_AES(m.getName().getBytes(), libEncrypt.AES_KEY.getBytes()));
