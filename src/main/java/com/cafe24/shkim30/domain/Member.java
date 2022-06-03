@@ -2,6 +2,7 @@ package com.cafe24.shkim30.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 
@@ -30,4 +31,7 @@ public class Member
 
     @Column(columnDefinition = "VARBINARY(32)")
     private String tel;     // 휴대전화번호
+
+    @Enumerated(EnumType.STRING)
+    private DeleteStatus is_delete = DeleteStatus.F;     // 삭제여부
 }

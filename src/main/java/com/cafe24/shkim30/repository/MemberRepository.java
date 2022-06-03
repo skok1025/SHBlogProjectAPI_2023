@@ -1,6 +1,7 @@
 package com.cafe24.shkim30.repository;
 
 import com.cafe24.shkim30.domain.Member;
+import com.cafe24.shkim30.dto.MemberDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -41,12 +42,14 @@ public class MemberRepository {
 
     /**
      * 회원 이름으로 리스트 가져오기
-     * @param name 검색이름
+     * @param memberId 검색 id
      * @return 회원 리스트
      */
-    public List<Member> findById(String memberId) {
-        return em.createQuery("select m from Member m where m.memberId = :memberId", Member.class)
+    public Member findById(String memberId) {
+        List<Member> memberList = em.createQuery("select m from Member m where m.memberId = :memberId", Member.class)
                 .setParameter("memberId", memberId)
                 .getResultList();
+
+        return memberList.size() > 0 ? memberList.get(0) : null;
     }
 }

@@ -1,22 +1,15 @@
 package com.cafe24.shkim30.dto;
 
 
-import com.cafe24.shkim30.domain.DeleteStatus;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import io.swagger.annotations.ApiParam;
-
 @Data
-public class MemberDTO {
-
-    private Long no;        // 인덱스
-
+public class MemberUpdateDTO {
     @ApiModelProperty(example = "member_id", notes = "회원아이디입니다.", required = true)
     @NotEmpty(message = "Member ID is a required value.")
     private String memberId;// 회원아이디
@@ -36,7 +29,4 @@ public class MemberDTO {
     
     @ApiModelProperty(example = "01000000000", notes = "전화번호 입니다.", required = true)
     private String tel;     // 휴대전화번호 (암호화)
-
-    @ApiModelProperty(example = "F", notes = "삭제여부")
-    private DeleteStatus is_delete;
 }
