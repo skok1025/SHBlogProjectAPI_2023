@@ -9,8 +9,6 @@ import org.springframework.test.annotation.Rollback;
 
 import javax.transaction.Transactional;
 
-import java.util.List;
-
 @SpringBootTest
 public class MemberServiceTest {
     @Autowired
@@ -34,7 +32,7 @@ public class MemberServiceTest {
 
     @Test
     @Transactional
-    public void memberFindByName() {
+    public void memberFindByMemberId() {
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setMemberId("test_id");
         memberDTO.setPassword("1234");
@@ -44,9 +42,9 @@ public class MemberServiceTest {
 
         memberService.addMember(memberDTO);
 
-        List<MemberDTO> kimList = memberService.findMemberByMemberName("kim");
+        MemberDTO member = memberService.findMemberByMemberId("test_id");
 
-        Assertions.assertThat(kimList).isNotEmpty();
+        Assertions.assertThat(member).isNotNull();
     }
 
 }
