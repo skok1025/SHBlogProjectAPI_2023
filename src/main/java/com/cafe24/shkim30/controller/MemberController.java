@@ -107,6 +107,6 @@ public class MemberController {
 
         return deleteMemberInfo.getNo() != null ?
                 ResponseEntity.status(HttpStatus.OK).body(JSONResult.success("회원정보 삭제성공", deleteMemberInfo))
-                : ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(JSONResult.fail("회원정보 삭제실패"));
+                : ResponseEntity.status(HttpStatus.OK).body(JSONResult.fail("회원정보 삭제실패"));
     }
 }
