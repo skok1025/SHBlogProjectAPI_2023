@@ -19,5 +19,5 @@ public class Category {
 
     @OneToOne
     @JoinColumn(name = "parent_no")
-    private Category category;  // 부모 카테고리 정보
+    private Category parentCategory;  // 부모 카테고리 정보
 }
