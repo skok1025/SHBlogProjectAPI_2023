@@ -1,19 +1,16 @@
 package com.cafe24.shkim30.service;
 
-import com.cafe24.shkim30.domain.DeleteStatus;
-import com.cafe24.shkim30.domain.Member;
 import com.cafe24.shkim30.dto.MemberDTO;
 import com.cafe24.shkim30.dto.MemberUpdateDTO;
 import com.cafe24.shkim30.library.libEncrypt;
 import com.cafe24.shkim30.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
-import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class MemberService {
 
@@ -26,19 +23,18 @@ public class MemberService {
      */
     @Transactional
     public MemberDTO addMember(MemberDTO memberdto) {
-        Member member = new Member();
+        MemberDTO memberInsertDTO = new MemberDTO();
 
-        member.setMemberId(memberdto.getMemberId());
-        member.setPassword(libEncrypt.getSHA512(memberdto.getPassword()));
-        member.setName(libEncrypt.encrypt_AES(memberdto.getName().getBytes(), libEncrypt.AES_KEY.getBytes()));
-        member.setEmail(libEncrypt.encrypt_AES(memberdto.getEmail().getBytes(), libEncrypt.AES_KEY.getBytes()));
-        member.setTel(libEncrypt.encrypt_AES(memberdto.getTel().getBytes(), libEncrypt.AES_KEY.getBytes()));
+        memberInsertDTO.setMemberId(memberdto.getMemberId());
+        memberInsertDTO.setPassword(libEncrypt.getSHA512(memberdto.getPassword()));
+        memberInsertDTO.setName(libEncrypt.encrypt_AES(memberdto.getName().getBytes(), libEncrypt.AES_KEY.getBytes()));
+        memberInsertDTO.setEmail(libEncrypt.encrypt_AES(memberdto.getEmail().getBytes(), libEncrypt.AES_KEY.getBytes()));
+        memberInsertDTO.setTel(libEncrypt.encrypt_AES(memberdto.getTel().getBytes(), libEncrypt.AES_KEY.getBytes()));
 
-        Long memberNo = memberRepository.save(member);
+        Long insertMemberNo = memberRepository.save(memberInsertDTO);
+        memberInsertDTO.setNo(insertMemberNo);
 
-        memberdto.setNo(memberNo);
-
-        return memberNo > 0 ? memberdto : null;
+        return memberInsertDTO;
     }
 
     /**
@@ -47,23 +43,10 @@ public class MemberService {
      * @return 조회한 회원정보
      */
     public MemberDTO findMemberByMemberId (String memberId) {
-        List<MemberDTO> result = new ArrayList<>();
-        Member findMember =
+        MemberDTO findMember =
                 memberRepository.findById(memberId);
 
-        MemberDTO memberDTO = new MemberDTO();
-
-        if (findMember != null) {
-            memberDTO.setNo(findMember.getNo());
-            memberDTO.setMemberId(findMember.getMemberId());
-            memberDTO.setPassword(findMember.getPassword());
-            memberDTO.setName(libEncrypt.decrypt_AES(findMember.getName().getBytes(), libEncrypt.AES_KEY.getBytes()));
-            memberDTO.setTel(libEncrypt.decrypt_AES(findMember.getTel().getBytes(), libEncrypt.AES_KEY.getBytes()));
-            memberDTO.setEmail(libEncrypt.decrypt_AES(findMember.getEmail().getBytes(), libEncrypt.AES_KEY.getBytes()));
-            memberDTO.setIs_delete(findMember.getIs_delete());
-        }
-
-        return memberDTO;
+        return findMember == null ? new MemberDTO() : findMember;
     }
 
     /**
@@ -73,41 +56,44 @@ public class MemberService {
      */
     @Transactional
     public MemberUpdateDTO updateMember(MemberUpdateDTO memberDTO) {
-        String memberId = memberDTO.getMemberId();
-        Member findMember = memberRepository.findById(memberId);
-
         int updateCnt = 0;
 
         if (memberDTO.getName() != null) {
-            findMember.setName(libEncrypt.encrypt_AES(memberDTO.getName().getBytes(), libEncrypt.AES_KEY.getBytes()));
+            memberDTO.setName(libEncrypt.encrypt_AES(memberDTO.getName().getBytes(), libEncrypt.AES_KEY.getBytes()));
             updateCnt++;
         }
 
         if (memberDTO.getEmail() != null) {
-            findMember.setEmail(libEncrypt.encrypt_AES(memberDTO.getEmail().getBytes(), libEncrypt.AES_KEY.getBytes()));
+            memberDTO.setEmail(libEncrypt.encrypt_AES(memberDTO.getEmail().getBytes(), libEncrypt.AES_KEY.getBytes()));
             updateCnt++;
         }
 
         if (memberDTO.getTel() != null) {
-            findMember.setTel(libEncrypt.encrypt_AES(memberDTO.getTel().getBytes(), libEncrypt.AES_KEY.getBytes()));
+            memberDTO.setTel(libEncrypt.encrypt_AES(memberDTO.getTel().getBytes(), libEncrypt.AES_KEY.getBytes()));
             updateCnt++;
         }
 
         if (memberDTO.getPassword() != null) {
-            findMember.setPassword(libEncrypt.getSHA512(memberDTO.getPassword()));
+            memberDTO.setPassword(libEncrypt.getSHA512(memberDTO.getPassword()));
+            updateCnt++;
+        }
+
+        if (memberDTO.getIs_delete() != null) {
             updateCnt++;
         }
 
         if (updateCnt > 0) {
-            memberDTO.setMemberId(memberId);
+            memberRepository.updateMember(memberDTO);
+        }
 
-            if (findMember != null) {
-                memberDTO.setMemberId(findMember.getMemberId());
-                memberDTO.setPassword(findMember.getPassword());
-                memberDTO.setName(libEncrypt.decrypt_AES(findMember.getName().getBytes(), libEncrypt.AES_KEY.getBytes()));
-                memberDTO.setTel(libEncrypt.decrypt_AES(findMember.getTel().getBytes(), libEncrypt.AES_KEY.getBytes()));
-                memberDTO.setEmail(libEncrypt.decrypt_AES(findMember.getEmail().getBytes(), libEncrypt.AES_KEY.getBytes()));
-            }
+        if (memberDTO.getName() != null) {
+            memberDTO.setName(libEncrypt.decrypt_AES(memberDTO.getName().getBytes(), libEncrypt.AES_KEY.getBytes()));
+        }
+        if (memberDTO.getTel() != null) {
+            memberDTO.setTel(libEncrypt.decrypt_AES(memberDTO.getTel().getBytes(), libEncrypt.AES_KEY.getBytes()));
+        }
+        if (memberDTO.getEmail() != null) {
+            memberDTO.setEmail(libEncrypt.decrypt_AES(memberDTO.getEmail().getBytes(), libEncrypt.AES_KEY.getBytes()));
         }
 
         return memberDTO;
@@ -115,10 +101,10 @@ public class MemberService {
 
     @Transactional
     public MemberDTO setDeleteMember(String memberId) {
-        Member findMember = memberRepository.findById(memberId);
+        MemberDTO findMember = memberRepository.findById(memberId);
 
         if (findMember != null) {
-            findMember.setIs_delete(DeleteStatus.T);
+            findMember.setIs_delete("T");
         }
 
         MemberDTO memberDTO = new MemberDTO();

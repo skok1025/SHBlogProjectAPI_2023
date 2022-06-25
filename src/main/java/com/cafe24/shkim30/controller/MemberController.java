@@ -8,6 +8,7 @@ import com.cafe24.shkim30.service.MemberService;
 import io.swagger.annotations.*;
 import lombok.RequiredArgsConstructor;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -20,6 +21,7 @@ import java.util.List;
 @Api(tags = {"회원정보"})
 @RestController
 @RequestMapping("/member")
+@Slf4j
 @RequiredArgsConstructor
 public class MemberController {
 

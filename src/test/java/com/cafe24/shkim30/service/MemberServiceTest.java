@@ -24,6 +24,7 @@ public class MemberServiceTest {
         memberDTO.setEmail("skok1025");
         memberDTO.setName("kim");
         memberDTO.setTel("1234");
+        memberDTO.setIs_delete("F");
 
         MemberDTO insertMember = memberService.addMember(memberDTO);
 

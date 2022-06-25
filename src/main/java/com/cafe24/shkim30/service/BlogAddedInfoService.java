@@ -1,13 +1,11 @@
 package com.cafe24.shkim30.service;
 
 
-import com.cafe24.shkim30.domain.Category;
 import com.cafe24.shkim30.dto.CategoryDTO;
 import com.cafe24.shkim30.repository.BlogAddedInfoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -21,18 +19,8 @@ public class BlogAddedInfoService {
      */
     @Transactional
     public CategoryDTO addCategory(CategoryDTO categoryDTO) {
-        Category category = new Category();
+        int result = blogAddedInfoRepository.saveCategory(categoryDTO);
 
-        category.setName(categoryDTO.getName());
-
-        if (categoryDTO.getParent_no() != null) {
-            Category parentCategory = blogAddedInfoRepository.categoryFindOne(categoryDTO.getParent_no());
-            category.setParentCategory(parentCategory);
-        }
-
-        Long categoryNo = blogAddedInfoRepository.saveCategory(category);
-        categoryDTO.setNo(categoryNo);
-
-        return categoryNo > 0 ? categoryDTO : null;
+        return result > 0 ? categoryDTO : null;
     }
 }

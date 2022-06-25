@@ -1,16 +1,12 @@
 package com.cafe24.shkim30.dto;
 
 
-import com.cafe24.shkim30.domain.DeleteStatus;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
-
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import io.swagger.annotations.ApiParam;
 
 @Data
 public class MemberDTO {
@@ -38,5 +34,5 @@ public class MemberDTO {
     private String tel;     // 휴대전화번호 (암호화)
 
     @ApiModelProperty(example = "F", notes = "삭제여부")
-    private DeleteStatus is_delete;
+    private String is_delete = "F";
 }

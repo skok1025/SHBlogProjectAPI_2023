@@ -15,7 +15,6 @@ public class MemberUpdateDTO {
     private String memberId;// 회원아이디
 
     @ApiModelProperty(example = "member_name", notes = "회원의 이름입니다.", required = true)
-    @NotEmpty(message = "Member Name is a required value.")
     private String name;    // 회원명 (암호화)
     
     @ApiModelProperty(example = "sk123456789!", notes = "비밀번호입니다.", required = true)
@@ -29,4 +28,7 @@ public class MemberUpdateDTO {
     
     @ApiModelProperty(example = "01000000000", notes = "전화번호 입니다.", required = true)
     private String tel;     // 휴대전화번호 (암호화)
+
+    @ApiModelProperty(example = "F", notes = "삭제여부")
+    private String is_delete = "F";
 }
