@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 @RequiredArgsConstructor
 public class BlogAddedInfoRepository {
@@ -23,5 +25,9 @@ public class BlogAddedInfoRepository {
 //        return category.getNo();
 
         return sqlSession.insert("category.insert", categoryDTO);
+    }
+
+    public List<CategoryDTO> getCategoryList(String memberNo) {
+        return sqlSession.selectList("category.categoryList", memberNo);
     }
 }

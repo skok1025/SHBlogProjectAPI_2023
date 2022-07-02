@@ -19,4 +19,7 @@ public class CategoryDTO {
 
     @ApiModelProperty(example = "10", notes = "부모카테고리 no 입니다", required = false)
     private Long parent_no;  // 부모 카테고리 정보
+
+    @ApiModelProperty(example = "1", notes = "멤버의 고유번호입니다.", required = false)
+    private Long member_no; // 블로그 카테고리 소유자 멤버번호
 }

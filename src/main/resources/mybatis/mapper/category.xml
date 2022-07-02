@@ -4,9 +4,9 @@
 <mapper namespace="category">
 	<insert id="insert" parameterType="categoryDTO">
 		<![CDATA[
-		    INSERT t_category(no, name, parent_no)
+		    INSERT t_category(no, name, parent_no, member_no)
 		    VALUES
-		    (null, #{name}, #{parent_no})
+		    (null, #{name}, #{parent_no}, #{member_no})
         ]]>
 
 		<selectKey keyProperty="no" resultType="long" order="AFTER">
@@ -15,5 +15,14 @@
 		    ]]>
 		</selectKey>
 	</insert>
+
+	<select id="categoryList" parameterType="String" resultType="categoryDTO">
+		<![CDATA[
+		    SELECT
+		       no, name, parent_no, member_no
+		    FROM t_category
+		    WHERE member_no = #{memberNo}
+        ]]>
+	</select>
 
 </mapper>

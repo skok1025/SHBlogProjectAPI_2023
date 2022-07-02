@@ -14,7 +14,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@Configuration // => ÀÎÅÚ¸®Á¦ÀÌ´Â ¿Ö... ¾ÈµÇ´Â°Ü
+@Configuration // => ì¸í…”ë¦¬ì œì´ëŠ” ì™œ... ì•ˆë˜ëŠ”ê²¨
 @EnableSwagger2
 public class SwaggerConfig {
 
@@ -32,9 +32,9 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("SH ºí·Î±× REST API")
+                .title("SH ë¸”ë¡œê·¸ REST API")
                 .version("1.0.0")
-                .description("°³¹ßÀÚ SHÀÇ ºí·Î±× swagger api ÀÔ´Ï´Ù.")
+                .description("ê°œë°œì SHì˜ ë¸”ë¡œê·¸ swagger api ì…ë‹ˆë‹¤.")
                 .build();
     }
 }

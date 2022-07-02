@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@Api(tags = {"È¸¿øÁ¤º¸"})
+@Api(tags = {"íšŒì›ì •ë³´"})
 @RestController
 @RequestMapping("/member")
 @Slf4j
@@ -27,26 +27,26 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    @ApiOperation(value = "È¸¿ø ID Á¶È¸")
+    @ApiOperation(value = "íšŒì› ID ì¡°íšŒ")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "memberId", value = "Á¶È¸ÇÒ È¸¿ø¾ÆÀÌµğ", required = true, dataType = "string", defaultValue = ""),
+            @ApiImplicitParam(name = "memberId", value = "ì¡°íšŒí•  íšŒì›ì•„ì´ë””", required = true, dataType = "string", defaultValue = ""),
     })
     @GetMapping("{memberId}")
     public ResponseEntity<JSONResult> findMemberById(@PathVariable("memberId") String memberId) {
         MemberDTO findMember = memberService.findMemberByMemberId(memberId);
 
-        return findMember.getMemberId() != null ? ResponseEntity.status(HttpStatus.OK).body(JSONResult.success("È¸¿ø ID '"+ memberId+ "' Á¶È¸¼º°ø", findMember))
-                : ResponseEntity.status(HttpStatus.OK).body(JSONResult.fail("È¸¿ø ID '"+ memberId + "' Á¶È¸µ¥ÀÌÅÍ ¾øÀ½"));
+        return findMember.getMemberId() != null ? ResponseEntity.status(HttpStatus.OK).body(JSONResult.success("íšŒì› ID '"+ memberId+ "' ì¡°íšŒì„±ê³µ", findMember))
+                : ResponseEntity.status(HttpStatus.OK).body(JSONResult.fail("íšŒì› ID '"+ memberId + "' ì¡°íšŒë°ì´í„° ì—†ìŒ"));
     }
 
-    @ApiOperation(value = "È¸¿øÁ¤º¸µî·Ï", notes = "email À» Á¦¿ÜÇÑ ¸ğµç °ª ÇÊ¼ö")
+    @ApiOperation(value = "íšŒì›ì •ë³´ë“±ë¡", notes = "email ì„ ì œì™¸í•œ ëª¨ë“  ê°’ í•„ìˆ˜")
     @ApiImplicitParams({
-    	@ApiImplicitParam(name = "memberDTO", value = "µî·ÏÇÒ È¸¿øÁ¤º¸", required = true, dataType = "MemberDTO", defaultValue = ""),
+    	@ApiImplicitParam(name = "memberDTO", value = "ë“±ë¡í•  íšŒì›ì •ë³´", required = true, dataType = "MemberDTO", defaultValue = ""),
     })
     @ApiResponses({
-        @ApiResponse(code = 201, message = "È¸¿øÁ¤º¸ µî·Ï¼º°ø")
-        , @ApiResponse(code = 400, message = "È¸¿øÁ¤º¸ µî·Ï½ÇÆĞ (ÇÊµå¿¡·¯)")
-        , @ApiResponse(code = 500, message = "È¸¿øÁ¤º¸ µî·Ï½ÇÆĞ (¼­¹ö¿¡·¯)")
+        @ApiResponse(code = 201, message = "íšŒì›ì •ë³´ ë“±ë¡ì„±ê³µ")
+        , @ApiResponse(code = 400, message = "íšŒì›ì •ë³´ ë“±ë¡ì‹¤íŒ¨ (í•„ë“œì—ëŸ¬)")
+        , @ApiResponse(code = 500, message = "íšŒì›ì •ë³´ ë“±ë¡ì‹¤íŒ¨ (ì„œë²„ì—ëŸ¬)")
     })
     @PostMapping("")
     public ResponseEntity<JSONResult> addMember(@RequestBody @Valid MemberDTO memberDTO, BindingResult bindingResult) {
@@ -56,25 +56,25 @@ public class MemberController {
             for (FieldError err : list) {
                 errMsg += err.getField() +"-"+err.getDefaultMessage()+"/";
             }
-            errMsg += "ÇÊµå¿¡·¯";
+            errMsg += "í•„ë“œì—ëŸ¬";
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail(errMsg));
         }
 
         MemberDTO insertMember = memberService.addMember(memberDTO);
 
         return insertMember.getNo() > 0 ?
-                ResponseEntity.status(HttpStatus.CREATED).body(JSONResult.success("È¸¿øÁ¤º¸ µî·Ï¼º°ø", insertMember))
-                : ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(JSONResult.fail("È¸¿øÁ¤º¸ µî·Ï½ÇÆĞ"));
+                ResponseEntity.status(HttpStatus.CREATED).body(JSONResult.success("íšŒì›ì •ë³´ ë“±ë¡ì„±ê³µ", insertMember))
+                : ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(JSONResult.fail("íšŒì›ì •ë³´ ë“±ë¡ì‹¤íŒ¨"));
     }
 
-    @ApiOperation(value = "È¸¿øÁ¤º¸¼öÁ¤", notes = "È¸¿ø¸í(name), ÀÌ¸ŞÀÏ(email), ÀüÈ­¹øÈ£(tel), password ¼öÁ¤°¡´É")
+    @ApiOperation(value = "íšŒì›ì •ë³´ìˆ˜ì •", notes = "íšŒì›ëª…(name), ì´ë©”ì¼(email), ì „í™”ë²ˆí˜¸(tel), password ìˆ˜ì •ê°€ëŠ¥")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "memberDTO", value = "¼öÁ¤ÇÒ È¸¿øÁ¤º¸", required = true, dataType = "MemberUpdateDTO", defaultValue = ""),
+            @ApiImplicitParam(name = "memberDTO", value = "ìˆ˜ì •í•  íšŒì›ì •ë³´", required = true, dataType = "MemberUpdateDTO", defaultValue = ""),
     })
     @ApiResponses({
-            @ApiResponse(code = 200, message = "È¸¿øÁ¤º¸ ¼öÁ¤¼º°ø")
-            , @ApiResponse(code = 400, message = "È¸¿øÁ¤º¸ ¼öÁ¤½ÇÆĞ (ÇÊµå¿¡·¯)")
-            , @ApiResponse(code = 500, message = "È¸¿øÁ¤º¸ ¼öÁ¤½ÇÆĞ (¼­¹ö¿¡·¯)")
+            @ApiResponse(code = 200, message = "íšŒì›ì •ë³´ ìˆ˜ì •ì„±ê³µ")
+            , @ApiResponse(code = 400, message = "íšŒì›ì •ë³´ ìˆ˜ì •ì‹¤íŒ¨ (í•„ë“œì—ëŸ¬)")
+            , @ApiResponse(code = 500, message = "íšŒì›ì •ë³´ ìˆ˜ì •ì‹¤íŒ¨ (ì„œë²„ì—ëŸ¬)")
     })
     @PutMapping("")
     public ResponseEntity<JSONResult> editMember(@RequestBody @Valid MemberUpdateDTO memberDTO, BindingResult bindingResult) {
@@ -84,31 +84,31 @@ public class MemberController {
             for (FieldError err : list) {
                 errMsg += err.getField() +"-"+err.getDefaultMessage()+"/";
             }
-            errMsg += "ÇÊµå¿¡·¯";
+            errMsg += "í•„ë“œì—ëŸ¬";
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail(errMsg));
         }
 
         MemberUpdateDTO updateMemberInfo = memberService.updateMember(memberDTO);
 
         return updateMemberInfo.getMemberId() != null ?
-                ResponseEntity.status(HttpStatus.OK).body(JSONResult.success("È¸¿øÁ¤º¸ ¼öÁ¤¼º°ø", updateMemberInfo))
-                : ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(JSONResult.fail("È¸¿øÁ¤º¸ ¼öÁ¤½ÇÆĞ"));
+                ResponseEntity.status(HttpStatus.OK).body(JSONResult.success("íšŒì›ì •ë³´ ìˆ˜ì •ì„±ê³µ", updateMemberInfo))
+                : ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(JSONResult.fail("íšŒì›ì •ë³´ ìˆ˜ì •ì‹¤íŒ¨"));
     }
 
-    @ApiOperation(value = "È¸¿øÁ¤º¸»èÁ¦")
+    @ApiOperation(value = "íšŒì›ì •ë³´ì‚­ì œ")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "memberId", value = "»èÁ¦ÇÒ È¸¿ø¾ÆÀÌµğ", required = true, dataType = "string", defaultValue = ""),
+            @ApiImplicitParam(name = "memberId", value = "ì‚­ì œí•  íšŒì›ì•„ì´ë””", required = true, dataType = "string", defaultValue = ""),
     })
     @ApiResponses({
-            @ApiResponse(code = 200, message = "È¸¿øÁ¤º¸ ¼öÁ¤¼º°ø")
-            , @ApiResponse(code = 500, message = "È¸¿øÁ¤º¸ ¼öÁ¤½ÇÆĞ (¼­¹ö¿¡·¯)")
+            @ApiResponse(code = 200, message = "íšŒì›ì •ë³´ ìˆ˜ì •ì„±ê³µ")
+            , @ApiResponse(code = 500, message = "íšŒì›ì •ë³´ ìˆ˜ì •ì‹¤íŒ¨ (ì„œë²„ì—ëŸ¬)")
     })
     @DeleteMapping("{memberId}")
     public ResponseEntity<JSONResult> deleteMember(@PathVariable("memberId") String memberId) {
         MemberDTO deleteMemberInfo = memberService.setDeleteMember(memberId);
 
         return deleteMemberInfo.getNo() != null ?
-                ResponseEntity.status(HttpStatus.OK).body(JSONResult.success("È¸¿øÁ¤º¸ »èÁ¦¼º°ø", deleteMemberInfo))
-                : ResponseEntity.status(HttpStatus.OK).body(JSONResult.fail("È¸¿øÁ¤º¸ »èÁ¦½ÇÆĞ"));
+                ResponseEntity.status(HttpStatus.OK).body(JSONResult.success("íšŒì›ì •ë³´ ì‚­ì œì„±ê³µ", deleteMemberInfo))
+                : ResponseEntity.status(HttpStatus.OK).body(JSONResult.fail("íšŒì›ì •ë³´ ì‚­ì œì‹¤íŒ¨"));
     }
 }

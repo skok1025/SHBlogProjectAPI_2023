@@ -15,5 +15,7 @@ CREATE TABLE t_category(
     no bigint(20) primary key auto_increment,
     name varchar(20) not null,
     parent_no bigint(20) null,
-    FOREIGN KEY (parent_no) REFERENCES t_category (no)
+    member_no bigint(20) null,
+    FOREIGN KEY (parent_no) REFERENCES t_category (no),
+    FOREIGN KEY (member_no) REFERENCES t_member (no)
 );

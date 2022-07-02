@@ -5,19 +5,17 @@ import com.cafe24.shkim30.dto.JSONResult;
 import com.cafe24.shkim30.service.BlogAddedInfoService;
 import io.swagger.annotations.*;
 import lombok.RequiredArgsConstructor;
+import org.apache.tomcat.util.buf.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
 
-@Api(tags = {"ºí·Î±× ºÎ°¡Á¤º¸"})
+@Api(tags = {"ë¸”ë¡œê·¸ ë¶€ê°€ì •ë³´"})
 @RestController
 @RequestMapping("/blog")
 @RequiredArgsConstructor
@@ -25,14 +23,14 @@ public class BlogAddedInfoController {
 
     private final BlogAddedInfoService blogAddedInfoService;
 
-    @ApiOperation(value = "Ä«Å×°í¸® µî·Ï", notes = "email À» Á¦¿ÜÇÑ ¸ğµç °ª ÇÊ¼ö")
+    @ApiOperation(value = "ì¹´í…Œê³ ë¦¬ ë“±ë¡", notes = "email ì„ ì œì™¸í•œ ëª¨ë“  ê°’ í•„ìˆ˜")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "categoryDTO", value = "µî·ÏÇÒ Ä«Å×°í¸®Á¤º¸", required = true, dataType = "CategoryDTO", defaultValue = ""),
+            @ApiImplicitParam(name = "categoryDTO", value = "ë“±ë¡í•  ì¹´í…Œê³ ë¦¬ì •ë³´", required = true, dataType = "CategoryDTO", defaultValue = ""),
     })
     @ApiResponses({
-            @ApiResponse(code = 201, message = "Ä«Å×°í¸® Á¤º¸ µî·Ï¼º°ø")
-            , @ApiResponse(code = 400, message = "Ä«Å×°í¸® Á¤º¸ µî·Ï½ÇÆĞ (ÇÊµå¿¡·¯)")
-            , @ApiResponse(code = 500, message = "Ä«Å×°í¸® Á¤º¸ µî·Ï½ÇÆĞ (¼­¹ö¿¡·¯)")
+            @ApiResponse(code = 201, message = "ì¹´í…Œê³ ë¦¬ ì •ë³´ ë“±ë¡ì„±ê³µ")
+            , @ApiResponse(code = 400, message = "ì¹´í…Œê³ ë¦¬ ì •ë³´ ë“±ë¡ì‹¤íŒ¨ (í•„ë“œì—ëŸ¬)")
+            , @ApiResponse(code = 500, message = "ì¹´í…Œê³ ë¦¬ ì •ë³´ ë“±ë¡ì‹¤íŒ¨ (ì„œë²„ì—ëŸ¬)")
     })
     @PostMapping("/category")
     public ResponseEntity<JSONResult> addBlogCategory(@RequestBody @Valid CategoryDTO categoryDTO, BindingResult bindingResult) {
@@ -42,14 +40,35 @@ public class BlogAddedInfoController {
             for (FieldError err : list) {
                 errMsg += err.getField() +"-"+err.getDefaultMessage()+"/";
             }
-            errMsg += "ÇÊµå¿¡·¯";
+            errMsg += "í•„ë“œì—ëŸ¬";
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail(errMsg));
         }
 
         CategoryDTO insertCategory = blogAddedInfoService.addCategory(categoryDTO);
 
         return insertCategory.getNo() > 0 ?
-                ResponseEntity.status(HttpStatus.CREATED).body(JSONResult.success("ºí·Î±× Ä«Å×°í¸®Á¤º¸ µî·Ï¼º°ø", insertCategory))
-                : ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(JSONResult.fail("ºí·Î±× Ä«Å×°í¸®Á¤º¸ µî·Ï½ÇÆĞ"));
+                ResponseEntity.status(HttpStatus.CREATED).body(JSONResult.success("ë¸”ë¡œê·¸ ì¹´í…Œê³ ë¦¬ì •ë³´ ë“±ë¡ì„±ê³µ", insertCategory))
+                : ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(JSONResult.fail("ë¸”ë¡œê·¸ ì¹´í…Œê³ ë¦¬ì •ë³´ ë“±ë¡ì‹¤íŒ¨"));
+    }
+
+    @ApiOperation(value = "ì¹´í…Œê³ ë¦¬ ì „ì²´ ë¦¬ìŠ¤íŠ¸", notes = "ì¹´í…Œê³ ë¦¬ ë¦¬ìŠ¤íŠ¸ ì œê³µ")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "member_no", value = "ì¹´í…Œê³ ë¦¬ ì¡°íšŒí•  íšŒì›ë²ˆí˜¸", required = true, dataType = "String", defaultValue = ""),
+    })
+    @ApiResponses({
+            @ApiResponse(code = 200, message = "ì¹´í…Œê³ ë¦¬ ë¦¬ìŠ¤íŠ¸ ì¡°íšŒ ì„±ê³µ")
+            , @ApiResponse(code = 400, message = "ì¹´í…Œê³ ë¦¬ ë¦¬ìŠ¤íŠ¸ ì¡°íšŒì‹¤íŒ¨ (í•„ë“œì—ëŸ¬)")
+            , @ApiResponse(code = 500, message = "ì¹´í…Œê³ ë¦¬ ë¦¬ìŠ¤íŠ¸ ì¡°íšŒì‹¤íŒ¨ (ì„œë²„ì—ëŸ¬)")
+    })
+    @GetMapping("/category-list")
+    public ResponseEntity<JSONResult> readCategoryList(@RequestParam("member_no") String memberNo) {
+        // ìš”ì²­í•œ ë©¤ë²„ë²ˆí˜¸ (member_no) ê°€ ìˆ«ìê°€ ì•„ë‹Œ ê²½ìš°
+        if (memberNo.matches("-?\\d+(\\.\\d+)?") == false) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail("ë©¤ë²„ë²ˆí˜¸ (member_no) ë¥¼ ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤."));
+        }
+
+        List<CategoryDTO> memberCategoryList = blogAddedInfoService.getCategoryList(memberNo);
+
+        return ResponseEntity.status(HttpStatus.OK).body(JSONResult.success("ë¸”ë¡œê·¸ ì¹´í…Œê³ ë¦¬ ë¦¬ìŠ¤íŠ¸ ì¡°íšŒì„±ê³µ", memberCategoryList));
     }
 }

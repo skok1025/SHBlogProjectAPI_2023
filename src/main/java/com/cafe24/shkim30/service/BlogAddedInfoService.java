@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class BlogAddedInfoService {
@@ -22,5 +24,9 @@ public class BlogAddedInfoService {
         int result = blogAddedInfoRepository.saveCategory(categoryDTO);
 
         return result > 0 ? categoryDTO : null;
+    }
+
+    public List<CategoryDTO> getCategoryList(String memberNo) {
+        return blogAddedInfoRepository.getCategoryList(memberNo);
     }
 }
