@@ -2,6 +2,7 @@ package com.cafe24.shkim30.service;
 
 
 import com.cafe24.shkim30.dto.CategoryDTO;
+import com.cafe24.shkim30.dto.CategoryUpdateDTO;
 import com.cafe24.shkim30.repository.BlogAddedInfoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,13 @@ public class BlogAddedInfoService {
 
     public List<CategoryDTO> getCategoryList(String memberNo) {
         return blogAddedInfoRepository.getCategoryList(memberNo);
+    }
+
+    public int updateCategory(CategoryUpdateDTO categoryUpdateDTO) {
+        return blogAddedInfoRepository.updateCategory(categoryUpdateDTO);
+    }
+
+    public int deleteCategory(Long categoryNo) {
+        return blogAddedInfoRepository.deleteCategory(categoryNo);
     }
 }

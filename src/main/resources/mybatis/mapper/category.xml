@@ -25,4 +25,31 @@
         ]]>
 	</select>
 
+	<update id="updateCategory" parameterType="categoryUpdateDTO">
+		<![CDATA[
+             UPDATE t_category
+             SET
+             no=#{no}
+        ]]>
+		<if test="name != null">
+			<![CDATA[
+			,name = #{name}
+			]]>
+		</if>
+		<if test="parent_no != null">
+			<![CDATA[
+			,parent_no = #{parent_no}
+			]]>
+		</if>
+		<![CDATA[
+			WHERE no = #{no}
+		]]>
+	</update>
+
+	<delete id="deleteCategory" parameterType="Long">
+		<![CDATA[
+             DELETE FROM t_category WHERE no=#{categoryNo}
+        ]]>
+	</delete>
+
 </mapper>

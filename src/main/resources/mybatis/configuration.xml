@@ -3,6 +3,7 @@
 <configuration>
     <typeAliases>
         <typeAlias alias="categoryDTO" type="com.cafe24.shkim30.dto.CategoryDTO" />
+        <typeAlias alias="categoryUpdateDTO" type="com.cafe24.shkim30.dto.CategoryUpdateDTO" />
         <typeAlias alias="memberDTO" type="com.cafe24.shkim30.dto.MemberDTO" />
         <typeAlias alias="memberUpdateDTO" type="com.cafe24.shkim30.dto.MemberUpdateDTO" />
     </typeAliases>
