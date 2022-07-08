@@ -6,9 +6,12 @@
         <typeAlias alias="categoryUpdateDTO" type="com.cafe24.shkim30.dto.CategoryUpdateDTO" />
         <typeAlias alias="memberDTO" type="com.cafe24.shkim30.dto.MemberDTO" />
         <typeAlias alias="memberUpdateDTO" type="com.cafe24.shkim30.dto.MemberUpdateDTO" />
+        <typeAlias alias="blogDTO" type="com.cafe24.shkim30.dto.BlogDTO" />
+        <typeAlias alias="blogUpdateDTO" type="com.cafe24.shkim30.dto.BlogUpdateDTO" />
     </typeAliases>
     <mappers>
         <mapper resource="mybatis/mapper/member.xml" />   <!-- t_member TABLE QUERY -->
         <mapper resource="mybatis/mapper/category.xml" /> <!-- t_category TABLE QUERY -->
+        <mapper resource="mybatis/mapper/blog.xml" /> <!-- t_blog TABLE QUERY -->
     </mappers>
 </configuration>

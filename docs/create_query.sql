@@ -19,3 +19,15 @@ CREATE TABLE t_category(
     FOREIGN KEY (parent_no) REFERENCES t_category (no),
     FOREIGN KEY (member_no) REFERENCES t_member (no)
 );
+
+/* 블로그 컨텐츠정보 */
+CREATE TABLE t_blog(
+    no bigint(20) primary key auto_increment,
+    contents text not null,
+    ins_timestamp timestamp null,
+    upd_timestamp timestamp null,
+    member_no bigint(20), 
+    category_no bigint(20),
+    FOREIGN KEY (member_no) REFERENCES t_member (no),
+    FOREIGN KEY (category_no) REFERENCES t_category (no)
+);
