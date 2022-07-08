@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.validation.constraints.NotEmpty;
 
 @Data
-public class BlogDTO {
+public class BlogInsertDTO {
 
     private Long no;
 
@@ -14,17 +14,6 @@ public class BlogDTO {
     @NotEmpty(message = "contents is a required value.")
     private String contents;
 
-    @ApiModelProperty(example = "", notes = "등록일자", required = false)
-    private String ins_timestamp;
-
-    @ApiModelProperty(example = "", notes = "수정일자", required = false)
-    private String upd_timestamp;
-
     private Long member_no;
-    private String member_id;
-    private String member_name;
-
-
     private Long category_no;
-    private String category_name;
 }

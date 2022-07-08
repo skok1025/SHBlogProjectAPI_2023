@@ -26,7 +26,7 @@ public class BlogAddedInfoController {
 
     @ApiOperation(value = "카테고리 등록", notes = "email 을 제외한 모든 값 필수")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "categoryDTO", value = "등록할 카테고리정보", required = true, dataType = "CategoryDTO", defaultValue = ""),
+            @ApiImplicitParam(name = "categoryDTO", value = "등록할 카테고리정보", required = true, dataType = "CategoryDTO"),
     })
     @ApiResponses({
             @ApiResponse(code = 201, message = "카테고리 정보 등록성공")

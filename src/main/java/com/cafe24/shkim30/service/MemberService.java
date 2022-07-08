@@ -46,6 +46,12 @@ public class MemberService {
         MemberDTO findMember =
                 memberRepository.findById(memberId);
 
+        if (findMember != null) {
+            findMember.setEmail(libEncrypt.decrypt_AES(findMember.getEmail().getBytes(), libEncrypt.AES_KEY.getBytes()));
+            findMember.setTel(libEncrypt.decrypt_AES(findMember.getTel().getBytes(), libEncrypt.AES_KEY.getBytes()));
+            findMember.setName(libEncrypt.decrypt_AES(findMember.getName().getBytes(), libEncrypt.AES_KEY.getBytes()));
+        }
+
         return findMember == null ? new MemberDTO() : findMember;
     }
 
