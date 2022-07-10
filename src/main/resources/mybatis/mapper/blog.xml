@@ -40,5 +40,19 @@
 		]]>
 	</select>
 
+	<update id="updateBlog">
+		<![CDATA[
+		    UPDATE t_blog
+		    SET
+		    contents = #{contents}
+		    WHERE no = #{no}
+        ]]>
+	</update>
+
+	<delete id="deleteBlog">
+		<![CDATA[
+		    DELETE FROM t_blog WHERE no = #{no}
+        ]]>
+	</delete>
 
 </mapper>

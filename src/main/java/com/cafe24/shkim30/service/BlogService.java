@@ -2,6 +2,7 @@ package com.cafe24.shkim30.service;
 
 import com.cafe24.shkim30.dto.BlogDTO;
 import com.cafe24.shkim30.dto.BlogInsertDTO;
+import com.cafe24.shkim30.dto.BlogUpdateDTO;
 import com.cafe24.shkim30.library.libEncrypt;
 import com.cafe24.shkim30.repository.BlogRepository;
 import lombok.RequiredArgsConstructor;
@@ -48,5 +49,13 @@ public class BlogService {
         searchParam.put("start_index", startIndex);
 
         return blogRepository.selectBlogList(searchParam);
+    }
+
+    public int editBlog(BlogUpdateDTO blogDTO) {
+        return blogRepository.updateBlog(blogDTO);
+    }
+
+    public int deleteBlog(Long no) {
+        return blogRepository.deleteBlog(no);
     }
 }

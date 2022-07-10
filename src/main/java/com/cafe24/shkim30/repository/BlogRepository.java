@@ -2,6 +2,7 @@ package com.cafe24.shkim30.repository;
 
 import com.cafe24.shkim30.dto.BlogDTO;
 import com.cafe24.shkim30.dto.BlogInsertDTO;
+import com.cafe24.shkim30.dto.BlogUpdateDTO;
 import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
@@ -31,5 +32,13 @@ public class BlogRepository {
 
     public List<BlogDTO> selectBlogList(Map<String, Long> searchParam) {
         return  sqlSession.selectList("blog.selectListByCategoryNo", searchParam);
+    }
+
+    public int updateBlog(BlogUpdateDTO blogDTO) {
+        return sqlSession.update("blog.updateBlog", blogDTO);
+    }
+
+    public int deleteBlog(Long no) {
+        return sqlSession.delete("blog.deleteBlog", no);
     }
 }

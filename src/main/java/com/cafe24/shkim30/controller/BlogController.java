@@ -1,7 +1,9 @@
 package com.cafe24.shkim30.controller;
 
+import com.cafe24.shkim30.domain.Blog;
 import com.cafe24.shkim30.dto.BlogDTO;
 import com.cafe24.shkim30.dto.BlogInsertDTO;
+import com.cafe24.shkim30.dto.BlogUpdateDTO;
 import com.cafe24.shkim30.dto.JSONResult;
 import com.cafe24.shkim30.service.BlogService;
 import io.swagger.annotations.*;
@@ -103,13 +105,47 @@ public class BlogController {
         return ResponseEntity.status(HttpStatus.OK).body(JSONResult.success("블로그 게시물 리스트 조회성공", blogList));
     }
 
+    @ApiOperation(value = "블로그 게시물 수정", notes = "모든 값 필수")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "blogUpdateDTO", value = "수정할 블로그 게시물 정보", required = true, dataType = "BlogUpdateDTO"),
+    })
+    @ApiResponses({
+            @ApiResponse(code = 200, message = "블로그게시물 정보 수정성공")
+            , @ApiResponse(code = 400, message = "블로그게시물 정보 수정실패 (필드에러)")
+            , @ApiResponse(code = 500, message = "블로그게시물 정보 수정실패 (서버에러)")
+    })
     @PutMapping("/contents")
-    public String editBlog() {
-        return null;
+    public ResponseEntity<JSONResult> editBlog(@RequestBody BlogUpdateDTO blogDTO) {
+        if (blogDTO.getNo() == null || blogDTO.getNo() == 0) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail("수정할 게시물번호 (no) 를 누락하였습니다."));
+        }
+
+        int updateResult = blogService.editBlog(blogDTO);
+
+        return updateResult > 0 ?
+                ResponseEntity.status(HttpStatus.OK).body(JSONResult.success(blogDTO.getNo() + "번 블로그 게시물 수정성공", blogDTO))
+                : ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(JSONResult.fail("게시물 수정에 실패하였습니다."));
     }
 
-    @DeleteMapping("/contents")
-    public String deleteBlog() {
-        return null;
+    @ApiOperation(value = "블로그 게시물 삭제", notes = "삭제할 게시물번호 필수")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "no", value = "삭제할 게시물 번호", required = true),
+    })
+    @ApiResponses({
+            @ApiResponse(code = 200, message = "블로그게시물 정보 수정성공")
+            , @ApiResponse(code = 400, message = "블로그게시물 정보 수정실패 (필드에러)")
+            , @ApiResponse(code = 500, message = "블로그게시물 정보 수정실패 (서버에러)")
+    })
+    @DeleteMapping("/contents/{no}")
+    public ResponseEntity<JSONResult> deleteBlog(@PathVariable("no") Long no) {
+        if (no == null || no == 0) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail("삭제할 게시물번호 (no) 를 누락하였습니다."));
+        }
+
+        int deleteResult = blogService.deleteBlog(no);
+
+        return deleteResult > 0 ?
+                ResponseEntity.status(HttpStatus.OK).body(JSONResult.success(no + "번 블로그 게시물 삭제성공", no))
+                : ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(JSONResult.fail("게시물 삭제에 실패하였습니다."));
     }
 }
