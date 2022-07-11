@@ -1,6 +1,5 @@
 package com.cafe24.shkim30.controller;
 
-import com.cafe24.shkim30.domain.Blog;
 import com.cafe24.shkim30.dto.BlogDTO;
 import com.cafe24.shkim30.dto.BlogInsertDTO;
 import com.cafe24.shkim30.dto.BlogUpdateDTO;
@@ -84,7 +83,7 @@ public class BlogController {
 
     @ApiOperation(value = "블로그 게시물 다건조회", notes = "모든 값 필수")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "category_no", value = "조회할 블로그 카테고리번호", required = true, defaultValue = "1"),
+            @ApiImplicitParam(name = "category_no", value = "조회할 블로그 카테고리번호", required = false),
             @ApiImplicitParam(name = "page_content_size", value = "조회할 블로그 개수", required = true, defaultValue = "5"),
             @ApiImplicitParam(name = "start_index", value = "조회 시작 인덱스 (블로그게시물 번호기준)", required = true, defaultValue = "0")
     })
@@ -95,7 +94,7 @@ public class BlogController {
     })
     @GetMapping("/contents-list")
     public ResponseEntity<JSONResult> readBlogList(
-            @RequestParam("category_no") Long categoryNo
+            @RequestParam(value = "category_no", required = false) Long categoryNo
             ,@RequestParam("page_content_size") Long pageContentSize
             ,@RequestParam("start_index") Long startIndex
     ) {

@@ -31,3 +31,7 @@ CREATE TABLE t_blog(
     FOREIGN KEY (member_no) REFERENCES t_member (no),
     FOREIGN KEY (category_no) REFERENCES t_category (no)
 );
+
+ALTER TABLE t_member convert to charset utf8;
+ALTER TABLE t_category convert to charset utf8;
+ALTER TABLE t_blog convert to charset utf8;

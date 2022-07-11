@@ -33,9 +33,18 @@
 		<![CDATA[
 		    SELECT b.no, b.contents, b.ins_timestamp, b.upd_timestamp, c.name as category_name, m.member_id as member_id, m.name as member_name
 		    FROM t_blog b
-		    INNER JOIN t_category c ON b.category_no = c.no
+		    LEFT OUTER JOIN t_category c ON b.category_no = c.no
 		    INNER JOIN t_member m ON b.member_no = m.no
-		    WHERE c.no = #{category_no} ORDER BY b.no DESC
+		    WHERE
+		    ]]>
+		    1 = 1
+			<if test="category_no != null">
+					<![CDATA[
+					AND c.no = #{category_no}
+					]]>
+			</if>
+		<![CDATA[
+		    ORDER BY b.no DESC
 		    LIMIT #{page_content_size} OFFSET #{start_index}
 		]]>
 	</select>
