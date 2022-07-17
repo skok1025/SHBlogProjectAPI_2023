@@ -4,7 +4,7 @@
 <mapper namespace="category">
 	<insert id="insert" parameterType="categoryDTO">
 		<![CDATA[
-		    INSERT t_category(no, name, parent_no, member_no)
+		    INSERT t_blog_category(no, name, parent_no, member_no)
 		    VALUES
 		    (null, #{name}, #{parent_no}, #{member_no})
         ]]>
@@ -20,14 +20,14 @@
 		<![CDATA[
 		    SELECT
 		       no, name, parent_no, member_no
-		    FROM t_category
+		    FROM t_blog_category
 		    WHERE member_no = #{memberNo}
         ]]>
 	</select>
 
 	<update id="updateCategory" parameterType="categoryUpdateDTO">
 		<![CDATA[
-             UPDATE t_category
+             UPDATE t_blog_category
              SET
              no=#{no}
         ]]>
@@ -48,7 +48,7 @@
 
 	<delete id="deleteCategory" parameterType="Long">
 		<![CDATA[
-             DELETE FROM t_category WHERE no=#{categoryNo}
+             DELETE FROM t_blog_category WHERE no=#{categoryNo}
         ]]>
 	</delete>
 

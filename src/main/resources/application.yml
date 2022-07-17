@@ -22,3 +22,25 @@ spring:
 mybatis:
   config-location: classpath:mybatis/configuration.xml
 
+---
+# profiles value 할당 (방법1)
+# java -jar 파일명.jar --spring.profiles.active=profiles값 (택1)
+# java -Dspring.profiles.active=profiles값 -jar 파일명.jar (택2)
+# profiles value 할당 (방법2)
+# Edit Configurations > Run/Debug Configurations > Active Profiles 값 할당
+# .\gradlew build -x test -Pprofile=prod
+# 빌드시 테스트 진행하지 않고 prod 로 실행
+---
+spring:
+  profiles:
+    active: prod
+  port: 8080
+  servlet:
+    context-path: /
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://127.0.0.1:3306/shkim30
+    username: root # 알맞게 수정필요
+    password: root # 알맞게 수정필요
+
+

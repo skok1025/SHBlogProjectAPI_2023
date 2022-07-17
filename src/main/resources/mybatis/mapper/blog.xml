@@ -5,9 +5,9 @@
 	<!-- 블로그 게시물 등록 쿼리 -->
 	<insert id="insert" parameterType="blogInsertDTO">
 		<![CDATA[
-		    INSERT INTO t_blog(no, contents, ins_timestamp, member_no, category_no)
+		    INSERT INTO t_blog(no, contents, ins_timestamp, member_no, category_no, title)
 		    VALUES
-		    (null, #{contents}, now(), #{member_no}, #{category_no})
+		    (null, #{contents}, now(), #{member_no}, #{category_no}, #{title})
         ]]>
 
 		<selectKey keyProperty="no" resultType="long" order="AFTER">
@@ -20,9 +20,9 @@
 	<!-- 블로그 게시물 단건 조회 쿼리 -->
 	<select id="selectOneByNo" parameterType="Long" resultType="blogDTO">
 		<![CDATA[
-		    SELECT b.no, b.contents, b.ins_timestamp, b.upd_timestamp, c.name as category_name, m.member_id as member_id, m.name as member_name
+		    SELECT b.no, b.contents, b.title, b.ins_timestamp, b.upd_timestamp, c.name as category_name, m.member_id as member_id, m.name as member_name
 		    FROM t_blog b
-		    INNER JOIN t_category c ON b.category_no = c.no
+		    INNER JOIN t_blog_category c ON b.category_no = c.no
 		    INNER JOIN t_member m ON b.member_no = m.no
 		    WHERE b.no = #{no}
         ]]>
@@ -31,9 +31,9 @@
 	<!-- 블로그 게시물 다건 조회 쿼리 -->
 	<select id="selectListByCategoryNo" parameterType="Map" resultType="blogDTO">
 		<![CDATA[
-		    SELECT b.no, b.contents, b.ins_timestamp, b.upd_timestamp, c.name as category_name, m.member_id as member_id, m.name as member_name
+		    SELECT b.no, b.contents, b.title, b.ins_timestamp, b.upd_timestamp, c.name as category_name, m.member_id as member_id, m.name as member_name
 		    FROM t_blog b
-		    LEFT OUTER JOIN t_category c ON b.category_no = c.no
+		    LEFT OUTER JOIN t_blog_category c ON b.category_no = c.no
 		    INNER JOIN t_member m ON b.member_no = m.no
 		    WHERE
 		    ]]>

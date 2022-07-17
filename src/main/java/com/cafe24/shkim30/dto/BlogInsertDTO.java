@@ -16,4 +16,5 @@ public class BlogInsertDTO {
 
     private Long member_no;
     private Long category_no;
+    private String title;
 }

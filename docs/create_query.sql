@@ -11,12 +11,12 @@ CREATE TABLE t_member(
 );
 
 /* 블로그 카테고리 정보 */
-CREATE TABLE t_category(
+CREATE TABLE t_blog_category(
     no bigint(20) primary key auto_increment,
     name varchar(20) not null,
     parent_no bigint(20) null,
     member_no bigint(20) null,
-    FOREIGN KEY (parent_no) REFERENCES t_category (no),
+    FOREIGN KEY (parent_no) REFERENCES t_blog_category (no),
     FOREIGN KEY (member_no) REFERENCES t_member (no)
 );
 
@@ -29,9 +29,11 @@ CREATE TABLE t_blog(
     member_no bigint(20), 
     category_no bigint(20),
     FOREIGN KEY (member_no) REFERENCES t_member (no),
-    FOREIGN KEY (category_no) REFERENCES t_category (no)
+    FOREIGN KEY (category_no) REFERENCES t_blog_category (no)
 );
 
+ALTER TABLE t_blog ADD COLUMN title VARCHAR(50);
+
 ALTER TABLE t_member convert to charset utf8;
-ALTER TABLE t_category convert to charset utf8;
+ALTER TABLE t_blog_category convert to charset utf8;
 ALTER TABLE t_blog convert to charset utf8;
