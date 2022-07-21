@@ -37,3 +37,7 @@ ALTER TABLE t_blog ADD COLUMN title VARCHAR(50);
 ALTER TABLE t_member convert to charset utf8;
 ALTER TABLE t_blog_category convert to charset utf8;
 ALTER TABLE t_blog convert to charset utf8;
+
+ALTER TABLE t_blog MODIFY upd_timestamp timestamp DEFAULT now() ON UPDATE CURRENT_TIMESTAMP();
+
+ALTER TABLE t_blog_category ADD COLUMN level enum('1','2') DEFAULT 1 NOT NULL;

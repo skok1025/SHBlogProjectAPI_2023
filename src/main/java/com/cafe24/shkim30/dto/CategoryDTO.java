@@ -22,4 +22,7 @@ public class CategoryDTO {
 
     @ApiModelProperty(example = "1", notes = "멤버의 고유번호입니다.", required = false)
     private Long member_no; // 블로그 카테고리 소유자 멤버번호
+
+    @ApiModelProperty(example = "1", notes = "카테고리의 레벨입니다.", required = false)
+    private Long level; // 카테고리 레벨 (대분류-1, 중분류-2)
 }
