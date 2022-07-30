@@ -6,7 +6,6 @@ import com.cafe24.shkim30.dto.JSONResult;
 import com.cafe24.shkim30.service.BlogAddedInfoService;
 import io.swagger.annotations.*;
 import lombok.RequiredArgsConstructor;
-import org.apache.tomcat.util.buf.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -18,6 +17,7 @@ import java.util.List;
 
 @Api(tags = {"블로그 부가정보"})
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/blog")
 @RequiredArgsConstructor
 public class BlogAddedInfoController {
@@ -42,7 +42,8 @@ public class BlogAddedInfoController {
                 errMsg += err.getField() +"-"+err.getDefaultMessage()+"/";
             }
             errMsg += "필드에러";
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail(errMsg));
+
+            throw new IllegalArgumentException(errMsg);
         }
 
         CategoryDTO insertCategory = blogAddedInfoService.addCategory(categoryDTO);
@@ -66,7 +67,7 @@ public class BlogAddedInfoController {
     public ResponseEntity<JSONResult> readCategoryList(@RequestParam("member_no") String memberNo) {
         // 요청한 멤버번호 (member_no) 가 숫자가 아닌 경우
         if (memberNo.matches("-?\\d+(\\.\\d+)?") == false) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail("멤버번호 (member_no) 를 잘못 입력하셨습니다."));
+            throw new IllegalArgumentException("멤버번호 (member_no) 를 잘못 입력하셨습니다.");
         }
 
         List<CategoryDTO> memberCategoryList = blogAddedInfoService.getCategoryList(memberNo);
@@ -83,7 +84,7 @@ public class BlogAddedInfoController {
     @PutMapping("/category")
     public ResponseEntity<JSONResult> updateCategoryInfo(CategoryUpdateDTO categoryUpdateDTO) {
         if (categoryUpdateDTO.getNo() == null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail("카테고리 (no) 를 누락하였습니다."));
+            throw new IllegalArgumentException("카테고리 (no) 를 누락하였습니다.");
         }
 
         int result = blogAddedInfoService.updateCategory(categoryUpdateDTO);
@@ -102,7 +103,7 @@ public class BlogAddedInfoController {
     @DeleteMapping("/category/{categoryNo}")
     public ResponseEntity<JSONResult> deleteCategory(@PathVariable("categoryNo") Long categoryNo) {
         if (categoryNo == null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail("카테고리 (no) 를 누락하였습니다."));
+            throw new IllegalArgumentException("카테고리 (no) 를 누락하였습니다.");
         }
 
         int result = blogAddedInfoService.deleteCategory(categoryNo);

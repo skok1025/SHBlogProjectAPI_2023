@@ -49,7 +49,8 @@ public class BlogController {
                 errMsg += err.getField() +"-"+err.getDefaultMessage()+"/";
             }
             errMsg += "필드에러";
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail(errMsg));
+
+            throw new IllegalArgumentException(errMsg);
         }
 
         BlogInsertDTO insertBlog = blogService.addBlog(blogDTO);
@@ -71,7 +72,7 @@ public class BlogController {
     @GetMapping("/contents/{no}")
     public ResponseEntity<JSONResult> readBlog(@PathVariable("no") Long no) {
         if (no == 0 || no == null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail("게시물번호 (no) 를 누락하였습니다."));
+            throw new IllegalArgumentException("게시물번호 (no) 를 누락하였습니다.");
         }
 
         BlogDTO blogDTO = blogService.getBlog(no);
@@ -116,7 +117,8 @@ public class BlogController {
     @PutMapping("/contents")
     public ResponseEntity<JSONResult> editBlog(@RequestBody BlogUpdateDTO blogDTO) {
         if (blogDTO.getNo() == null || blogDTO.getNo() == 0) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail("수정할 게시물번호 (no) 를 누락하였습니다."));
+            //return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail("수정할 게시물번호 (no) 를 누락하였습니다."));
+            throw new IllegalArgumentException();
         }
 
         int updateResult = blogService.editBlog(blogDTO);

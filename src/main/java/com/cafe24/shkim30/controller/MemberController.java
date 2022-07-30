@@ -57,7 +57,7 @@ public class MemberController {
                 errMsg += err.getField() +"-"+err.getDefaultMessage()+"/";
             }
             errMsg += "필드에러";
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail(errMsg));
+            throw new IllegalArgumentException(errMsg);
         }
 
         MemberDTO insertMember = memberService.addMember(memberDTO);
@@ -85,7 +85,7 @@ public class MemberController {
                 errMsg += err.getField() +"-"+err.getDefaultMessage()+"/";
             }
             errMsg += "필드에러";
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(JSONResult.fail(errMsg));
+            throw new IllegalArgumentException(errMsg);
         }
 
         MemberUpdateDTO updateMemberInfo = memberService.updateMember(memberDTO);

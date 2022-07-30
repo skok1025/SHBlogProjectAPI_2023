@@ -1,27 +1,6 @@
-server:
-  port: 8080
-  servlet:
-    context-path: /blog-api
 spring:
-  datasource:
-    #driver-class-name: org.mariadb.jdbc.Driver
-    #url: jdbc:mariadb://127.0.0.1:3306/shkim30
-    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mariadb://127.0.0.1:3306/shkim30
-    username: root
-    password: root
-  #jpa:
-  #  hibernate:
-  #    ddl-auto: create
-  #  properties:
-  #    hibernate:
-  #      format_sql: true
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
-mybatis:
-  config-location: classpath:mybatis/configuration.xml
-
+  profiles:
+    active: prod
 ---
 # profiles value 할당 (방법1)
 # java -jar 파일명.jar --spring.profiles.active=profiles값 (택1)
@@ -31,16 +10,3 @@ mybatis:
 # .\gradlew build -x test -Pprofile=prod
 # 빌드시 테스트 진행하지 않고 prod 로 실행
 ---
-spring:
-  profiles:
-    active: prod
-  port: 8080
-  servlet:
-    context-path: /
-  datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://127.0.0.1:3306/shkim30
-    username: root # 알맞게 수정필요
-    password: root # 알맞게 수정필요
-
-

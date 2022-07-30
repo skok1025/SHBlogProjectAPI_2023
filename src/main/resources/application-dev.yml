@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /blog-api
+  error:
+    whitelabel:
+      enabled: false
+    include-exception: true
+    include-message: always # no, on_param, always
+    include-stacktrace: on_param  # no, on_param, always
+    include-binding-errors: on_param  # no, on_param, always
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mariadb://127.0.0.1:3306/shkim30
+    username: root
+    password: root
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+mybatis:
+  config-location: classpath:mybatis/configuration.xml
+
+
+

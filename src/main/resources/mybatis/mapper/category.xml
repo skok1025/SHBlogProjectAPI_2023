@@ -7,7 +7,7 @@
 		<![CDATA[
 		    INSERT t_blog_category(no, name, parent_no, member_no, level)
 		    VALUES
-		    (null, #{name}, #{parent_no}, #{member_no}, (select level+1 FROM t_blog_category bc WHERE bc.no =  #{parent_no}));
+		    (null, #{name}, #{parent_no}, #{member_no}, IFNULL((select level+1 FROM t_blog_category bc WHERE bc.no =  #{parent_no}),1));
         ]]>
 
 		<selectKey keyProperty="no" resultType="java.lang.Long" order="AFTER">

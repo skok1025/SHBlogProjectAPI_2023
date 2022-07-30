@@ -40,4 +40,7 @@ ALTER TABLE t_blog convert to charset utf8;
 
 ALTER TABLE t_blog MODIFY upd_timestamp timestamp DEFAULT now() ON UPDATE CURRENT_TIMESTAMP();
 
-ALTER TABLE t_blog_category ADD COLUMN level enum('1','2') DEFAULT 1 NOT NULL;
+ALTER TABLE t_blog_category ADD COLUMN level enum('1','2') DEFAULT 1 NULL;
+
+-- parent_no 제약조건 제거
+ALTER TABLE t_blog_category DROP CONSTRAINT t_blog_category_ibfk_1;
