@@ -31,9 +31,11 @@
 	<!-- 블로그 게시물 다건 조회 쿼리 -->
 	<select id="selectListByCategoryNo" parameterType="Map" resultType="blogDTO">
 		<![CDATA[
-		    SELECT b.no, b.contents, b.title, b.ins_timestamp, b.upd_timestamp, c.name as category_name, m.member_id as member_id, m.name as member_name
+		    SELECT b.no, b.contents, b.title, b.ins_timestamp, b.upd_timestamp, m.member_id as member_id, m.name as member_name,
+		    c.no AS category_no, c.name as category_name, pc.no AS parent_category_no, pc.name AS parent_category_name
 		    FROM t_blog b
 		    LEFT OUTER JOIN t_blog_category c ON b.category_no = c.no
+		    LEFT OUTER JOIN t_blog_category pc ON pc.no = c.parent_no
 		    INNER JOIN t_member m ON b.member_no = m.no
 		    WHERE
 		    ]]>
