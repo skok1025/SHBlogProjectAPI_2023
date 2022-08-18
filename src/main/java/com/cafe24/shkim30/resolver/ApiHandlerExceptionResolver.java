@@ -18,6 +18,11 @@ public class ApiHandlerExceptionResolver implements HandlerExceptionResolver {
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST, ex.getMessage());
                 return new ModelAndView();
             }
+
+            if (ex instanceof Exception) {
+                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "내부 에러발생");
+                return new ModelAndView();
+            }
         } catch (IOException e) {
             log.error("resolver ex", e);
         }
