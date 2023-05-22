@@ -18,6 +18,7 @@ public class libEncryptTest {
     @Test
     public void test(){
         String testStr = "TEST";
+        System.out.println(libEncrypt.getSHA512("1234"));
         String encryptStr = libEncrypt.encrypt_AES(testStr.getBytes(), libEncrypt.AES_KEY.getBytes());
         String decryptStr = libEncrypt.decrypt_AES(encryptStr.getBytes(),libEncrypt.AES_KEY.getBytes() );
 
