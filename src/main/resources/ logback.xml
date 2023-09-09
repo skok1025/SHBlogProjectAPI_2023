@@ -4,7 +4,7 @@
         <encoder><pattern>%d{yyyyMMdd HH:mm:ss.SSS} [%thread] %-3level %logger{5} - %msg %n</pattern>
         </encoder>
     </appender>
-
+<!--
     <logger name="jdbc" level="OFF"/>
     <logger name="jdbc.sqlonly" level="INFO" additivity="false"><appender-ref ref="STDOUT"/>
     </logger>
@@ -12,6 +12,7 @@
     </logger>
     <logger name="jdbc.resultsettable" level="INFO" additivity="false"><appender-ref ref="STDOUT"/>
     </logger>
+    -->
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>/home/shblog/logs/api.log</file>
