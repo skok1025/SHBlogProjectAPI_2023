@@ -56,3 +56,7 @@ tasks.named('test') {
 test {
 	exclude '**/*'
 }
+
+bootWar {
+	archiveName("SHBlogAPI.war")
+}
