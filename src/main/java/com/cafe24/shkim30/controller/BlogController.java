@@ -86,7 +86,8 @@ public class BlogController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "category_no", value = "조회할 블로그 카테고리번호", required = false),
             @ApiImplicitParam(name = "page_content_size", value = "조회할 블로그 개수", required = true, defaultValue = "5"),
-            @ApiImplicitParam(name = "start_index", value = "조회 시작 인덱스 (블로그게시물 번호기준)", required = true, defaultValue = "0")
+            @ApiImplicitParam(name = "start_index", value = "조회 시작 인덱스 (블로그게시물 번호기준)", required = true, defaultValue = "0"),
+            @ApiImplicitParam(name = "keyword", value = "블로그 검색 키워드", required = false)
     })
     @ApiResponses({
             @ApiResponse(code = 200, message = "블로그게시물 정보 다건조회성공")
@@ -98,9 +99,10 @@ public class BlogController {
             @RequestParam(value = "category_no", required = false) Long categoryNo
             ,@RequestParam("page_content_size") Long pageContentSize
             ,@RequestParam("start_index") Long startIndex
+            ,@RequestParam(value="keyword", required = false) String keyword
     ) {
 
-        List<BlogDTO> blogList = blogService.getBlogList(categoryNo, pageContentSize, startIndex);
+        List<BlogDTO> blogList = blogService.getBlogList(categoryNo, pageContentSize, startIndex, keyword);
 
         return ResponseEntity.status(HttpStatus.OK).body(JSONResult.success("블로그 게시물 리스트 조회성공", blogList));
     }

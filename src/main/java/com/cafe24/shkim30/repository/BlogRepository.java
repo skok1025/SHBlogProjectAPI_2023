@@ -30,7 +30,7 @@ public class BlogRepository {
         return sqlSession.selectOne("blog.selectOneByNo", no);
     }
 
-    public List<BlogDTO> selectBlogList(Map<String, Long> searchParam) {
+    public List<BlogDTO> selectBlogList(Map<String, Object> searchParam) {
         return  sqlSession.selectList("blog.selectListByCategoryNo", searchParam);
     }
 

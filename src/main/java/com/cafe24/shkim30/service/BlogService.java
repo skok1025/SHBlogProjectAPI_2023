@@ -42,11 +42,12 @@ public class BlogService {
         return blogDTO;
     }
 
-    public List<BlogDTO> getBlogList(Long categoryNo, Long pageContentSize, Long startIndex) {
-        Map<String, Long> searchParam = new HashMap<>();
+    public List<BlogDTO> getBlogList(Long categoryNo, Long pageContentSize, Long startIndex, String keyword) {
+        Map<String, Object> searchParam = new HashMap<>();
         searchParam.put("category_no", categoryNo);
         searchParam.put("page_content_size", pageContentSize);
         searchParam.put("start_index", startIndex);
+        searchParam.put("keyword", keyword);
 
         return blogRepository.selectBlogList(searchParam);
     }

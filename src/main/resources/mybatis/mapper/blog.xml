@@ -45,6 +45,11 @@
 					AND c.no = #{category_no}
 					]]>
 			</if>
+			<if test="keyword != null">
+					<![CDATA[
+					AND (b.contents like CONCAT('%',#{keyword},'%') OR b.title like CONCAT('%',#{keyword},'%'))
+					]]>
+			</if>
 		<![CDATA[
 		    ORDER BY b.no DESC
 		    LIMIT #{page_content_size} OFFSET #{start_index}
