@@ -3,6 +3,7 @@ package com.cafe24.shkim30.service;
 import com.cafe24.shkim30.dto.fconline.BasicUserInfoDTO;
 import com.cafe24.shkim30.dto.fconline.MaxDivisionInfoDTO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -14,11 +15,14 @@ import java.util.*;
 public class FcOnlineService {
 
     private final RestTemplate restTemplate;
+
+    @Value("${fconline.auth}")
+    public String FCONLINE_AUTH;
     public BasicUserInfoDTO getBasicUserInfo(String nickname) {
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
         headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.set("Authorization", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJYLUFwcC1SYXRlLUxpbWl0IjoiNTAwOjEwIiwiYWNjb3VudF9pZCI6IjEwNTc0MDg3NDQiLCJhdXRoX2lkIjoiMiIsImV4cCI6MTcwOTc5NTEwNiwiaWF0IjoxNjk0MjQzMTA2LCJuYmYiOjE2OTQyNDMxMDYsInNlcnZpY2VfaWQiOiI0MzAwMTE0ODEiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4ifQ.jPj9QMTTrCjIh8Ho8cYAtIORK0jdW-nVRAMdRG0u3ak");
+        headers.set("Authorization", FCONLINE_AUTH);
 
         HttpEntity<String> entity = new HttpEntity<String>("", headers);
 
@@ -39,7 +43,7 @@ public class FcOnlineService {
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
         headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.set("Authorization", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJYLUFwcC1SYXRlLUxpbWl0IjoiNTAwOjEwIiwiYWNjb3VudF9pZCI6IjEwNTc0MDg3NDQiLCJhdXRoX2lkIjoiMiIsImV4cCI6MTcwOTc5NTEwNiwiaWF0IjoxNjk0MjQzMTA2LCJuYmYiOjE2OTQyNDMxMDYsInNlcnZpY2VfaWQiOiI0MzAwMTE0ODEiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4ifQ.jPj9QMTTrCjIh8Ho8cYAtIORK0jdW-nVRAMdRG0u3ak");
+        headers.set("Authorization", FCONLINE_AUTH);
 
         HttpEntity<String> entity = new HttpEntity<String>("", headers);
 

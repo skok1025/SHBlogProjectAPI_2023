@@ -22,5 +22,8 @@ spring:
 mybatis:
   config-location: classpath:mybatis/configuration.xml
 
+fconline:
+  auth: SECRET
+
 
 
