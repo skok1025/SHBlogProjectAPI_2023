@@ -1,0 +1,978 @@
+{
+    "collect_date": "2023-12-22 23:00:28",
+    "total_count": 108,
+    "all_event_list": [
+        {
+            "EVENT_NM": "서울일러스트레이션페어V.16",
+            "EVENT_PERIOD": "2023-12-21~2023-12-24",
+            "EVENT_PLACE": "코엑스 B&D1홀",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0611127",
+            "EVENT_Y": "37.5103947",
+            "EVENT_AREA_CODE": "POI001"
+        },
+        {
+            "EVENT_NM": "[서울디자인재단] DDP 45133",
+            "EVENT_PERIOD": "2023-12-21~2024-11-30",
+            "EVENT_PLACE": "DDP 디자인랩 3층 디자인쇼룸",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "서울라이트 DDP 2023 겨울",
+            "EVENT_PERIOD": "2023-12-21~2024-01-01",
+            "EVENT_PLACE": "어울림광장， 디자인거리 등 야외",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "DDP 겨울축제",
+            "EVENT_PERIOD": "2023-12-21~2023-12-31",
+            "EVENT_PLACE": "DDP 일대",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "DDP 오픈큐레이팅 vol.31 [상실의 기록 - 소생하는 기억의 틈]展",
+            "EVENT_PERIOD": "2023-12-15~2024-03-31",
+            "EVENT_PLACE": "DDP 갤러리문",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "New Heritage 조명에 담긴 정성의 기록",
+            "EVENT_PERIOD": "2023-11-30~2024-03-31",
+            "EVENT_PLACE": "DDP 뮤지엄 3F 둘레길갤러리",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "뮤지컬 [몬테크리스토]",
+            "EVENT_PERIOD": "2023-11-21~2024-02-25",
+            "EVENT_PLACE": "충무아트센터 대극장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.014790889728",
+            "EVENT_Y": "37.5659409687669",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "Stefan SAGMEISTER의 Now is Better(지금이 더 낫다)",
+            "EVENT_PERIOD": "2023-11-17~2024-03-03",
+            "EVENT_PLACE": "동대문디자인플라자(DDP) 잔디사랑방 & 잔디언덕",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "뮤지컬 [리진 : 빛의 여인]",
+            "EVENT_PERIOD": "2023-11-14~2024-02-04",
+            "EVENT_PLACE": "충무아트센터 중극장 블랙",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.014790889728",
+            "EVENT_Y": "37.5659409687669",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "[서울디자인재단] 워너브라더스 100주년 특별전",
+            "EVENT_PERIOD": "2023-11-08~2024-03-31",
+            "EVENT_PLACE": "DDP 뮤지엄 전시1관(지하2층)",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "[서울디자인재단] We'd rather be alive than dead:삶은 그 어떤 경우에도 죽음보다 아름답다",
+            "EVENT_PERIOD": "2023-09-25~2023-12-31",
+            "EVENT_PLACE": "DDP 잔디언덕",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "2023 DDP 디자인 융합 전시 [We'd rather be alive than dead]",
+            "EVENT_PERIOD": "2023-09-25~2023-12-31",
+            "EVENT_PLACE": "동대문디자인플라자(DDP) 잔디언덕",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "Design Dream Land: Fall in K-POP 디자인 드림 랜드",
+            "EVENT_PERIOD": "2023-09-22~2024-04-30",
+            "EVENT_PLACE": "DDP 디자인랩 3층",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "[서울디자인재단] 럭스: 시적해상도",
+            "EVENT_PERIOD": "2023-09-05~2023-12-31",
+            "EVENT_PLACE": "DDP 뮤지엄 2층 전시2관",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "D-숲",
+            "EVENT_PERIOD": "2023-02-01~2023-12-31",
+            "EVENT_PLACE": "DDP 디자인랩(살림터) 1층 D-숲",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "UD 라이프스타일 플랫폼",
+            "EVENT_PERIOD": "2023-01-01~2023-12-31",
+            "EVENT_PLACE": "동대문디자인플라자(DDP) 디자인 랩 3층 디자인 쇼룸， 디자인 홀",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "매거진 라이브러리: 기록에 머물다",
+            "EVENT_PERIOD": "2023-01-01~2023-12-31",
+            "EVENT_PLACE": "DDP 디자인랩(살림터) 3층 매거진 라이브러리",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "DDP 디자인놀이터 디키디키",
+            "EVENT_PERIOD": "2023-01-01~2023-12-31",
+            "EVENT_PLACE": "DDP 뮤지엄(배움터) 4층 디자인놀이터",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "[서울디자인재단] DDP 건축투어",
+            "EVENT_PERIOD": "2023-01-01~2023-12-31",
+            "EVENT_PLACE": "DDP 뮤지엄 1층",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "라이트 스페이스",
+            "EVENT_PERIOD": "2023-01-01~2023-12-31",
+            "EVENT_PLACE": "DDP 디자인랩(살림터)1층 미디어아트 갤러리(라이트 스페이스)",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI002"
+        },
+        {
+            "EVENT_NM": "시민청 기획전시 [웨이브 2023 수도서울]",
+            "EVENT_PERIOD": "2023-04-06~2023-12-31",
+            "EVENT_PLACE": "서울시청 시민청 지하1층(담벼락미디어， 소리갤러리， 시민청갤러리)",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.97867495087418",
+            "EVENT_Y": "37.566634997636804",
+            "EVENT_AREA_CODE": "POI003"
+        },
+        {
+            "EVENT_NM": "시민청 스탬프투어",
+            "EVENT_PERIOD": "2023-01-18~2023-12-31",
+            "EVENT_PLACE": "서울시청 시민청 지하1，2층",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.97867495087418",
+            "EVENT_Y": "37.566634997636804",
+            "EVENT_AREA_CODE": "POI003"
+        },
+        {
+            "EVENT_NM": "모든 빛이 사라진 후에도 : WITH",
+            "EVENT_PERIOD": "2023-12-01~2023-12-31",
+            "EVENT_PLACE": "갤러리자유， 카페브레이브(협력)",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.98931187262",
+            "EVENT_Y": "37.5335020410682",
+            "EVENT_AREA_CODE": "POI004"
+        },
+        {
+            "EVENT_NM": "송영은 개인전 미래는 고양이처럼 [Snowy Fairytale]",
+            "EVENT_PERIOD": "2023-11-18~2023-12-31",
+            "EVENT_PLACE": "냥이네 그릭 요거트 2호점",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.98931187262",
+            "EVENT_Y": "37.5335020410682",
+            "EVENT_AREA_CODE": "POI004"
+        },
+        {
+            "EVENT_NM": "[문화실험공간 호수] 신진예술가 공모전 팔레트 palette展",
+            "EVENT_PERIOD": "2023-11-14~2023-12-31",
+            "EVENT_PLACE": "문화실험공간 호수 2층 전시실",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.101092270844",
+            "EVENT_Y": "37.5103180005696",
+            "EVENT_AREA_CODE": "POI005"
+        },
+        {
+            "EVENT_NM": "[한성백제박물관] 제4회 백제그림그리기대회 전시",
+            "EVENT_PERIOD": "2023-06-26~2023-12-31",
+            "EVENT_PLACE": "한성백제박물관",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.121175",
+            "EVENT_Y": "37.515505",
+            "EVENT_AREA_CODE": "POI005"
+        },
+        {
+            "EVENT_NM": "오늘은 어린이날， 소파 방정환의 이야기세상",
+            "EVENT_PERIOD": "2023-05-04~2024-03-11",
+            "EVENT_PLACE": "국림민속박물관 어린이박물관 2층 상설전시2",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.978889955558",
+            "EVENT_Y": "37.5816745310255",
+            "EVENT_AREA_CODE": "POI008"
+        },
+        {
+            "EVENT_NM": "177회 정기연주 [겨울， 다시 겨울]",
+            "EVENT_PERIOD": "2023-12-22~2023-12-23",
+            "EVENT_PLACE": "세종체임버홀",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "유니버설발레단 [호두까기인형]",
+            "EVENT_PERIOD": "2023-12-21~2023-12-31",
+            "EVENT_PLACE": "세종대극장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "어떤 겨울 날들 - 2023 겨울 스텔라장 소극장 콘서트",
+            "EVENT_PERIOD": "2023-12-20~2023-12-25",
+            "EVENT_PLACE": "세종S씨어터",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "2023 delight Seoul [딜라이트 서울]",
+            "EVENT_PERIOD": "2023-12-15~2024-04-30",
+            "EVENT_PLACE": "갤러리광화",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.976089119166",
+            "EVENT_Y": "37.5705293260846",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "아뜰리에광화 : 드랍더빛",
+            "EVENT_PERIOD": "2023-12-15~2024-03-31",
+            "EVENT_PLACE": "야외전시",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "[서울시청] 2023 서울라이트 광화문",
+            "EVENT_PERIOD": "2023-12-15~2024-01-21",
+            "EVENT_PLACE": "광화문 및 광화문광장 육조마당",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.976168275947",
+            "EVENT_Y": "37.5718478584908",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "2023 광화문광장 마켓",
+            "EVENT_PERIOD": "2023-12-15~2024-01-21",
+            "EVENT_PLACE": "광화문광장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.976168275947",
+            "EVENT_Y": "37.5718478584908",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "서울윈터페스타 2023",
+            "EVENT_PERIOD": "2023-12-15~2024-01-21",
+            "EVENT_PLACE": "광화문광장， 청계천 등",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.976168275947",
+            "EVENT_Y": "37.5718478584908",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "2023 서울빛초롱축제",
+            "EVENT_PERIOD": "2023-12-15~2024-01-21",
+            "EVENT_PLACE": "광화문광장， 청계광장/청계천， 서울광장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.976168275947",
+            "EVENT_Y": "37.5718478584908",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "2024 한글일일달력전",
+            "EVENT_PERIOD": "2023-12-12~2024-01-08",
+            "EVENT_PLACE": "세종이야기전시장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "뮤지컬 [맥베스]",
+            "EVENT_PERIOD": "2023-12-02~2023-12-30",
+            "EVENT_PLACE": "세종M씨어터",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "2023 세종미술관 기획전시 [필묵변혁-송수남 황창배] 연계 교육 프로그램",
+            "EVENT_PERIOD": "2023-12-01~2024-01-14",
+            "EVENT_PLACE": "세종미술관 1관，세종미술관 2관",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "2023 아트서울 특별전 [조각의 시간:울림]",
+            "EVENT_PERIOD": "2023-11-28~2024-02-29",
+            "EVENT_PLACE": "세종문화회관 내.외부 공간",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "2023 세종미술관 기획전시 [필묵변혁-송수남 황창배]",
+            "EVENT_PERIOD": "2023-11-28~2024-01-14",
+            "EVENT_PLACE": "세종미술관 1관，세종미술관 2관",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI009"
+        },
+        {
+            "EVENT_NM": "[2023년 한양도성박물관 하반기 기획전] 훈국， 도성을 쌓다",
+            "EVENT_PERIOD": "2023-11-21~2024-03-17",
+            "EVENT_PLACE": "한양도성박물관 기획전시실",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.008512843764",
+            "EVENT_Y": "37.5728571793919",
+            "EVENT_AREA_CODE": "POI024"
+        },
+        {
+            "EVENT_NM": "정현 개인전 [덩어리]",
+            "EVENT_PERIOD": "2023-12-20~2024-03-17",
+            "EVENT_PLACE": "서울시립 남서울미술관 1층 야외 서울시립 남서울미술관 2층 전시실",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.979465861688",
+            "EVENT_Y": "37.4760535374985",
+            "EVENT_AREA_CODE": "POI029"
+        },
+        {
+            "EVENT_NM": "권진규의 영원한 집",
+            "EVENT_PERIOD": "2023-06-01~2024-12-31",
+            "EVENT_PLACE": "서울시립 남서울미술관 1층 전시실， 자료실",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.979465861688",
+            "EVENT_Y": "37.4760535374985",
+            "EVENT_AREA_CODE": "POI029"
+        },
+        {
+            "EVENT_NM": "[서울식물원] 보타닉 메이즈: 식물은 살아있다",
+            "EVENT_PERIOD": "2023-10-19~2024-02-25",
+            "EVENT_PLACE": "식물문화센터 2층， 프로젝트홀2",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.83500723721524",
+            "EVENT_Y": "37.569657094189104",
+            "EVENT_AREA_CODE": "POI032"
+        },
+        {
+            "EVENT_NM": "Exhibition  크리스마스선물",
+            "EVENT_PERIOD": "2023-12-15~2023-12-31",
+            "EVENT_PLACE": "서울시 서대문구 이화여대 2가길 24 2층",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.946249418096",
+            "EVENT_Y": "37.5584812115306",
+            "EVENT_AREA_CODE": "POI040"
+        },
+        {
+            "EVENT_NM": "서대문구 신촌문화발전소 기획전시 [가동하는 이미지 - 교차하는 이야기]",
+            "EVENT_PERIOD": "2023-09-09~2023-12-30",
+            "EVENT_PLACE": "신촌문화발전소",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.939755119659",
+            "EVENT_Y": "37.5579629763806",
+            "EVENT_AREA_CODE": "POI040"
+        },
+        {
+            "EVENT_NM": "2023 문화다양성 확산 사업 제6회 [종로문화다양성연극제]",
+            "EVENT_PERIOD": "2023-10-19~2023-12-31",
+            "EVENT_PLACE": "프로그램별 상이",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.002999899724",
+            "EVENT_Y": "37.5811855191284",
+            "EVENT_AREA_CODE": "POI054"
+        },
+        {
+            "EVENT_NM": "[청춘극장] 2023년 12월 영화프로그램",
+            "EVENT_PERIOD": "2023-11-27~2023-12-28",
+            "EVENT_PLACE": "청춘극장 문화일보홀",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.968644839862",
+            "EVENT_Y": "37.5671292085624",
+            "EVENT_AREA_CODE": "POI064"
+        },
+        {
+            "EVENT_NM": "북촌도락 12월 [계동마님댁 동지맞이]",
+            "EVENT_PERIOD": "2023-12-22~2023-12-23",
+            "EVENT_PLACE": "북촌문화센터",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.986276109794",
+            "EVENT_Y": "37.5790883269606",
+            "EVENT_AREA_CODE": "POI066"
+        },
+        {
+            "EVENT_NM": "이음&창작 프로젝트 선정작 [연극 바비클럽]",
+            "EVENT_PERIOD": "2023-12-21~2023-12-24",
+            "EVENT_PLACE": "북촌창우극장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.988859908739",
+            "EVENT_Y": "37.578907499269",
+            "EVENT_AREA_CODE": "POI066"
+        },
+        {
+            "EVENT_NM": "[서울공예박물관] 2023 KZ 프로젝트 [만년사물]",
+            "EVENT_PERIOD": "2023-12-19~2024-03-10",
+            "EVENT_PLACE": "서울공예박물관 전시1동 3층",
+            "EVENT_ETC_DETAIL": "소책자 13페이지 하단 <사색사유> 전시 포스터 대신， 본 전시(만년사물) 포스터로 교체 부탁드립니다~~!!",
+            "EVENT_X": "126.983533363501",
+            "EVENT_Y": "37.5766481740232",
+            "EVENT_AREA_CODE": "POI066"
+        },
+        {
+            "EVENT_NM": "[서울공예박물관] 시민소통 공예프로그램 공예@쇼윈도 #6 [옹기와 숨ː]",
+            "EVENT_PERIOD": "2023-12-15~2024-03-03",
+            "EVENT_PLACE": "서울공예박물관 전시3동 1층 쇼윈도",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.983533363501",
+            "EVENT_Y": "37.5766481740232",
+            "EVENT_AREA_CODE": "POI066"
+        },
+        {
+            "EVENT_NM": "2023 송현동 솔빛축제",
+            "EVENT_PERIOD": "2023-12-15~2024-01-21",
+            "EVENT_PLACE": "열린송현 녹지광장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.98157018878199",
+            "EVENT_Y": "37.57651039211841",
+            "EVENT_AREA_CODE": "POI066"
+        },
+        {
+            "EVENT_NM": "고희동미술관 재개관 3주년기념전시 「모던을 터치하다: 고희동， 근대회화의 선구자」",
+            "EVENT_PERIOD": "2022-12-27~2024-04-30",
+            "EVENT_PLACE": "고희동미술관 (종로구 창덕궁5길 40)",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.988964342912",
+            "EVENT_Y": "37.5831328092664",
+            "EVENT_AREA_CODE": "POI066"
+        },
+        {
+            "EVENT_NM": "박노수미술관 개관 10주년 기념전시 [화필인생-박노수의 모던 타임즈]",
+            "EVENT_PERIOD": "2023-05-26~2024-03-31",
+            "EVENT_PLACE": "박노수미술관 (종로구 옥인1길 24)",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.966818545949",
+            "EVENT_Y": "37.5813191962491",
+            "EVENT_AREA_CODE": "POI067"
+        },
+        {
+            "EVENT_NM": "임수진 개인전 : 밤과 흰  눈",
+            "EVENT_PERIOD": "2023-12-15~2024-01-05",
+            "EVENT_PLACE": "아르떼케이",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.03562200241",
+            "EVENT_Y": "37.5274024182689",
+            "EVENT_AREA_CODE": "POI071"
+        },
+        {
+            "EVENT_NM": "세계적인 AI 미디어 아티스트 [레픽 아나돌의 최초 상설전시]",
+            "EVENT_PERIOD": "2023-10-06~2099-12-31",
+            "EVENT_PLACE": "여의도 63빌딩 1F 동편 로비",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.939909338068",
+            "EVENT_Y": "37.5196641552816",
+            "EVENT_AREA_CODE": "POI072"
+        },
+        {
+            "EVENT_NM": "2023 서울우리소리박물관 특별전 [자장자장 도담도담]",
+            "EVENT_PERIOD": "2023-05-05~2024-04-28",
+            "EVENT_PLACE": "서울우리소리박물관 기획전시실",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.989622047178",
+            "EVENT_Y": "37.577157928122",
+            "EVENT_AREA_CODE": "POI078"
+        },
+        {
+            "EVENT_NM": "[서울우리소리박물관] 자율학습프로그램 [자연관찰 우리소리]",
+            "EVENT_PERIOD": "2023-04-04~2023-12-31",
+            "EVENT_PLACE": "서울우리소리박물관 1층 누마루",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.989622047178",
+            "EVENT_Y": "37.577157928122",
+            "EVENT_AREA_CODE": "POI078"
+        },
+        {
+            "EVENT_NM": "[낙원 FM '일일 DJ 체험' 모집 중!]",
+            "EVENT_PERIOD": "2023-01-18~2023-12-31",
+            "EVENT_PLACE": "N스페이스(다목적홀)",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.987902476529",
+            "EVENT_Y": "37.5727635233966",
+            "EVENT_AREA_CODE": "POI078"
+        },
+        {
+            "EVENT_NM": "[노원문화재단] 방과후 공연놀이터",
+            "EVENT_PERIOD": "2023-11-08~2023-12-27",
+            "EVENT_PLACE": "노원어린이극장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.063692307584",
+            "EVENT_Y": "37.6544500497108",
+            "EVENT_AREA_CODE": "POI079"
+        },
+        {
+            "EVENT_NM": "[서울디자인재단] DDP 45133",
+            "EVENT_PERIOD": "2023-12-21~2024-11-30",
+            "EVENT_PLACE": "DDP 디자인랩 3층 디자인쇼룸",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "서울라이트 DDP 2023 겨울",
+            "EVENT_PERIOD": "2023-12-21~2024-01-01",
+            "EVENT_PLACE": "어울림광장， 디자인거리 등 야외",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "DDP 겨울축제",
+            "EVENT_PERIOD": "2023-12-21~2023-12-31",
+            "EVENT_PLACE": "DDP 일대",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "DDP 오픈큐레이팅 vol.31 [상실의 기록 - 소생하는 기억의 틈]展",
+            "EVENT_PERIOD": "2023-12-15~2024-03-31",
+            "EVENT_PLACE": "DDP 갤러리문",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "New Heritage 조명에 담긴 정성의 기록",
+            "EVENT_PERIOD": "2023-11-30~2024-03-31",
+            "EVENT_PLACE": "DDP 뮤지엄 3F 둘레길갤러리",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "Stefan SAGMEISTER의 Now is Better(지금이 더 낫다)",
+            "EVENT_PERIOD": "2023-11-17~2024-03-03",
+            "EVENT_PLACE": "동대문디자인플라자(DDP) 잔디사랑방 & 잔디언덕",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "[서울디자인재단] 워너브라더스 100주년 특별전",
+            "EVENT_PERIOD": "2023-11-08~2024-03-31",
+            "EVENT_PLACE": "DDP 뮤지엄 전시1관(지하2층)",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "[서울디자인재단] We'd rather be alive than dead:삶은 그 어떤 경우에도 죽음보다 아름답다",
+            "EVENT_PERIOD": "2023-09-25~2023-12-31",
+            "EVENT_PLACE": "DDP 잔디언덕",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "2023 DDP 디자인 융합 전시 [We'd rather be alive than dead]",
+            "EVENT_PERIOD": "2023-09-25~2023-12-31",
+            "EVENT_PLACE": "동대문디자인플라자(DDP) 잔디언덕",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "Design Dream Land: Fall in K-POP 디자인 드림 랜드",
+            "EVENT_PERIOD": "2023-09-22~2024-04-30",
+            "EVENT_PLACE": "DDP 디자인랩 3층",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "[서울디자인재단] 럭스: 시적해상도",
+            "EVENT_PERIOD": "2023-09-05~2023-12-31",
+            "EVENT_PLACE": "DDP 뮤지엄 2층 전시2관",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "D-숲",
+            "EVENT_PERIOD": "2023-02-01~2023-12-31",
+            "EVENT_PLACE": "DDP 디자인랩(살림터) 1층 D-숲",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "UD 라이프스타일 플랫폼",
+            "EVENT_PERIOD": "2023-01-01~2023-12-31",
+            "EVENT_PLACE": "동대문디자인플라자(DDP) 디자인 랩 3층 디자인 쇼룸， 디자인 홀",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "매거진 라이브러리: 기록에 머물다",
+            "EVENT_PERIOD": "2023-01-01~2023-12-31",
+            "EVENT_PLACE": "DDP 디자인랩(살림터) 3층 매거진 라이브러리",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "DDP 디자인놀이터 디키디키",
+            "EVENT_PERIOD": "2023-01-01~2023-12-31",
+            "EVENT_PLACE": "DDP 뮤지엄(배움터) 4층 디자인놀이터",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "[서울디자인재단] DDP 건축투어",
+            "EVENT_PERIOD": "2023-01-01~2023-12-31",
+            "EVENT_PLACE": "DDP 뮤지엄 1층",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "라이트 스페이스",
+            "EVENT_PERIOD": "2023-01-01~2023-12-31",
+            "EVENT_PLACE": "DDP 디자인랩(살림터)1층 미디어아트 갤러리(라이트 스페이스)",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.0096257245",
+            "EVENT_Y": "37.5668131264",
+            "EVENT_AREA_CODE": "POI083"
+        },
+        {
+            "EVENT_NM": "[서울아트책보고] 겨울 그림책 이야기",
+            "EVENT_PERIOD": "2023-12-08~2024-03-03",
+            "EVENT_PLACE": "서울아트책보고 아트북 갤러리",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.867088741096",
+            "EVENT_Y": "37.4982125677913",
+            "EVENT_AREA_CODE": "POI086"
+        },
+        {
+            "EVENT_NM": "2023 광화문광장 마켓",
+            "EVENT_PERIOD": "2023-12-15~2024-01-21",
+            "EVENT_PLACE": "광화문광장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.976168275947",
+            "EVENT_Y": "37.5718478584908",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "177회 정기연주 [겨울， 다시 겨울]",
+            "EVENT_PERIOD": "2023-12-22~2023-12-23",
+            "EVENT_PLACE": "세종체임버홀",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "유니버설발레단 [호두까기인형]",
+            "EVENT_PERIOD": "2023-12-21~2023-12-31",
+            "EVENT_PLACE": "세종대극장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "어떤 겨울 날들 - 2023 겨울 스텔라장 소극장 콘서트",
+            "EVENT_PERIOD": "2023-12-20~2023-12-25",
+            "EVENT_PLACE": "세종S씨어터",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "2023 delight Seoul [딜라이트 서울]",
+            "EVENT_PERIOD": "2023-12-15~2024-04-30",
+            "EVENT_PLACE": "갤러리광화",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.976089119166",
+            "EVENT_Y": "37.5705293260846",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "아뜰리에광화 : 드랍더빛",
+            "EVENT_PERIOD": "2023-12-15~2024-03-31",
+            "EVENT_PLACE": "야외전시",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "[서울시청] 2023 서울라이트 광화문",
+            "EVENT_PERIOD": "2023-12-15~2024-01-21",
+            "EVENT_PLACE": "광화문 및 광화문광장 육조마당",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.976168275947",
+            "EVENT_Y": "37.5718478584908",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "2023 광화문광장 마켓",
+            "EVENT_PERIOD": "2023-12-15~2024-01-21",
+            "EVENT_PLACE": "광화문광장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.976168275947",
+            "EVENT_Y": "37.5718478584908",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "서울윈터페스타 2023",
+            "EVENT_PERIOD": "2023-12-15~2024-01-21",
+            "EVENT_PLACE": "광화문광장， 청계천 등",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.976168275947",
+            "EVENT_Y": "37.5718478584908",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "2023 서울빛초롱축제",
+            "EVENT_PERIOD": "2023-12-15~2024-01-21",
+            "EVENT_PLACE": "광화문광장， 청계광장/청계천， 서울광장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.976168275947",
+            "EVENT_Y": "37.5718478584908",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "2024 한글일일달력전",
+            "EVENT_PERIOD": "2023-12-12~2024-01-08",
+            "EVENT_PLACE": "세종이야기전시장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "뮤지컬 [맥베스]",
+            "EVENT_PERIOD": "2023-12-02~2023-12-30",
+            "EVENT_PLACE": "세종M씨어터",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "2023 세종미술관 기획전시 [필묵변혁-송수남 황창배] 연계 교육 프로그램",
+            "EVENT_PERIOD": "2023-12-01~2024-01-14",
+            "EVENT_PLACE": "세종미술관 1관，세종미술관 2관",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "2023 아트서울 특별전 [조각의 시간:울림]",
+            "EVENT_PERIOD": "2023-11-28~2024-02-29",
+            "EVENT_PLACE": "세종문화회관 내.외부 공간",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "2023 세종미술관 기획전시 [필묵변혁-송수남 황창배]",
+            "EVENT_PERIOD": "2023-11-28~2024-01-14",
+            "EVENT_PLACE": "세종미술관 1관，세종미술관 2관",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9760053",
+            "EVENT_Y": "37.5726241",
+            "EVENT_AREA_CODE": "POI088"
+        },
+        {
+            "EVENT_NM": "이야기， 무대에 오르다-도서와 아카이브로 보는 공연예술",
+            "EVENT_PERIOD": "2023-11-14~2024-03-31",
+            "EVENT_PLACE": "국립극장 공연예술박물관 기획전시실",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.999267349473",
+            "EVENT_Y": "37.5519949082942",
+            "EVENT_AREA_CODE": "POI091"
+        },
+        {
+            "EVENT_NM": "[노들섬] 노들 예술체험 프로그램 다채로운 노들공방",
+            "EVENT_PERIOD": "2023-12-02~2023-12-24",
+            "EVENT_PLACE": "노들섬 노들라운지(노들랩)",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.958036465507",
+            "EVENT_Y": "37.5176638307111",
+            "EVENT_AREA_CODE": "POI092"
+        },
+        {
+            "EVENT_NM": "[구립증산정보도서관] 2023 찾아가는 게임문화교실 2",
+            "EVENT_PERIOD": "2023-12-06~2023-12-27",
+            "EVENT_PLACE": "4층 문화강좌실",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9075589",
+            "EVENT_Y": "37.582727",
+            "EVENT_AREA_CODE": "POI097"
+        },
+        {
+            "EVENT_NM": "[구립증산정보도서관] 2023 사서와 함께하는 [꼼지락 북아트 동아리 3기]",
+            "EVENT_PERIOD": "2023-09-11~2023-12-28",
+            "EVENT_PLACE": "4층 문화강좌실",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9075589",
+            "EVENT_Y": "37.582727",
+            "EVENT_AREA_CODE": "POI097"
+        },
+        {
+            "EVENT_NM": "[구립증산정보도서관] 2023 제2기 도서관이 들려주는 그림책 동아리",
+            "EVENT_PERIOD": "2023-09-11~2023-12-26",
+            "EVENT_PLACE": "지하 1층 문화강좌실",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9075589",
+            "EVENT_Y": "37.582727",
+            "EVENT_AREA_CODE": "POI097"
+        },
+        {
+            "EVENT_NM": "[구립증산정보도서관] 열린 책 읽기 모임 Book-ing Club 모집",
+            "EVENT_PERIOD": "2023-03-23~2023-12-31",
+            "EVENT_PLACE": "4층 문화강좌실， 온라인(ZOOM)",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.9075589",
+            "EVENT_Y": "37.582727",
+            "EVENT_AREA_CODE": "POI097"
+        },
+        {
+            "EVENT_NM": "서울광장 스케이트장",
+            "EVENT_PERIOD": "2023-12-22~2024-02-11",
+            "EVENT_PLACE": "서울광장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "126.97769782752",
+            "EVENT_Y": "37.5653338689441",
+            "EVENT_AREA_CODE": "POI099"
+        },
+        {
+            "EVENT_NM": "2023 한강페스티벌 겨울 [Hangang River Festival-Winter]",
+            "EVENT_PERIOD": "2023-12-22~2023-12-31",
+            "EVENT_PLACE": "한강공원 일대",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.041669171001",
+            "EVENT_Y": "37.5389557772121",
+            "EVENT_AREA_CODE": "POI101"
+        },
+        {
+            "EVENT_NM": "[서울상상나라] 눈사람 크림빵",
+            "EVENT_PERIOD": "2023-12-02~2023-12-31",
+            "EVENT_PLACE": "서울상상나라 지하 1층 요리놀이실",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.077569",
+            "EVENT_Y": "37.55055",
+            "EVENT_AREA_CODE": "POI104"
+        },
+        {
+            "EVENT_NM": "[서울상상나라] 루돌프 브라우니",
+            "EVENT_PERIOD": "2023-12-02~2023-12-31",
+            "EVENT_PLACE": "서울상상나라 지하 1층 요리놀이실",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.077569",
+            "EVENT_Y": "37.55055",
+            "EVENT_AREA_CODE": "POI104"
+        },
+        {
+            "EVENT_NM": "[서울상상나라] 우리， 캠핑 가요!",
+            "EVENT_PERIOD": "2023-10-31~2024-12-31",
+            "EVENT_PLACE": "서울상상나라 3층 문화놀이",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.077569",
+            "EVENT_Y": "37.55055",
+            "EVENT_AREA_CODE": "POI104"
+        },
+        {
+            "EVENT_NM": "[서울상상나라] 불멍별멍! 캠핑 놀이",
+            "EVENT_PERIOD": "2023-10-07~2023-12-31",
+            "EVENT_PLACE": "서울상상나라 지하 1층 표현놀이실",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.077569",
+            "EVENT_Y": "37.55055",
+            "EVENT_AREA_CODE": "POI104"
+        },
+        {
+            "EVENT_NM": "2023 공공미술 수변갤러리 프로젝트 [싱싱겨울]",
+            "EVENT_PERIOD": "2023-12-16~2024-01-07",
+            "EVENT_PLACE": "잠원한강공원 다목적운동장",
+            "EVENT_ETC_DETAIL": null,
+            "EVENT_X": "127.012272942402",
+            "EVENT_Y": "37.5207505466926",
+            "EVENT_AREA_CODE": "POI111"
+        }
+    ]
+}
