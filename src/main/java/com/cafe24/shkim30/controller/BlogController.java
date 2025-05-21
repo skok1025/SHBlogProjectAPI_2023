@@ -4,6 +4,7 @@ import com.cafe24.shkim30.dto.BlogDTO;
 import com.cafe24.shkim30.dto.BlogInsertDTO;
 import com.cafe24.shkim30.dto.BlogUpdateDTO;
 import com.cafe24.shkim30.dto.JSONResult;
+import com.cafe24.shkim30.library.LibLog;
 import com.cafe24.shkim30.service.BlogService;
 import io.swagger.annotations.*;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 블로그 게시물 관련 컨트롤러
@@ -50,10 +52,28 @@ public class BlogController {
             }
             errMsg += "필드에러";
 
+            LibLog.getInstance().write("add_blog", Map.of(
+                    "add_result", "fail",
+                    "err_msg", errMsg,
+                    "contents", blogDTO.getContents(),
+                    "member_no", blogDTO.getMember_no(),
+                    "category_no", blogDTO.getCategory_no(),
+                    "title", blogDTO.getTitle()
+            ));
+
             throw new IllegalArgumentException(errMsg);
         }
 
         BlogInsertDTO insertBlog = blogService.addBlog(blogDTO);
+
+        LibLog.getInstance().write("add_blog", Map.of(
+                "add_result", "success",
+                "no", insertBlog.getNo(),
+                "contents", insertBlog.getContents(),
+                "member_no", insertBlog.getMember_no(),
+                "category_no", insertBlog.getCategory_no(),
+                "title", insertBlog.getTitle()
+        ));
 
         return insertBlog.getNo() > 0 ?
                 ResponseEntity.status(HttpStatus.CREATED).body(JSONResult.success("블로그 게시물정보 등록성공", insertBlog))
@@ -125,6 +145,13 @@ public class BlogController {
 
         int updateResult = blogService.editBlog(blogDTO);
 
+        LibLog.getInstance().write("edit_blog", Map.of(
+                "add_result", "success",
+                "no", blogDTO.getNo(),
+                "contents", blogDTO.getContents(),
+                "title", blogDTO.getTitle()
+        ));
+
         return updateResult > 0 ?
                 ResponseEntity.status(HttpStatus.OK).body(JSONResult.success(blogDTO.getNo() + "번 블로그 게시물 수정성공", blogDTO))
                 : ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(JSONResult.fail("게시물 수정에 실패하였습니다."));
@@ -146,6 +173,11 @@ public class BlogController {
         }
 
         int deleteResult = blogService.deleteBlog(no);
+
+        LibLog.getInstance().write("delete_blog", Map.of(
+                "add_result", deleteResult > 0 ? "success" : "fail",
+                "no", no
+        ));
 
         return deleteResult > 0 ?
                 ResponseEntity.status(HttpStatus.OK).body(JSONResult.success(no + "번 블로그 게시물 삭제성공", no))
