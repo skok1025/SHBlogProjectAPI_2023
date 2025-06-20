@@ -43,6 +43,11 @@
 			,parent_no = #{parent_no}
 			]]>
 		</if>
+		<if test="level != null">
+			<![CDATA[
+			,level = #{level}
+			]]>
+		</if>
 		<![CDATA[
 			WHERE no = #{no}
 		]]>

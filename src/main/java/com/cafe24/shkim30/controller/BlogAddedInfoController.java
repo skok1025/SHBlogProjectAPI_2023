@@ -82,7 +82,7 @@ public class BlogAddedInfoController {
             , @ApiResponse(code = 500, message = "카테고리 정보 수정실패 (서버에러)")
     })
     @PutMapping("/category")
-    public ResponseEntity<JSONResult> updateCategoryInfo(CategoryUpdateDTO categoryUpdateDTO) {
+    public ResponseEntity<JSONResult> updateCategoryInfo(@RequestBody CategoryUpdateDTO categoryUpdateDTO) {
         if (categoryUpdateDTO.getNo() == null) {
             throw new IllegalArgumentException("카테고리 (no) 를 누락하였습니다.");
         }
