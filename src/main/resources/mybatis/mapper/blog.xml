@@ -60,7 +60,19 @@
 		<![CDATA[
 		    UPDATE t_blog
 		    SET
-		    contents = #{contents}
+		    no=#{no}
+		]]>
+		<if test="title != null">
+			<![CDATA[
+			,title = #{title}
+			]]>
+		</if>
+		<if test="contents != null">
+			<![CDATA[
+			,contents = #{contents}
+			]]>
+		</if>
+		<![CDATA[
 		    WHERE no = #{no}
         ]]>
 	</update>

@@ -129,7 +129,7 @@ public class BlogController {
 
     @ApiOperation(value = "블로그 게시물 수정", notes = "모든 값 필수")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "blogUpdateDTO", value = "수정할 블로그 게시물 정보", required = true, dataType = "BlogUpdateDTO"),
+            @ApiImplicitParam(name = "blogDTO", value = "수정할 블로그 게시물 정보", required = true, dataType = "BlogUpdateDTO"),
     })
     @ApiResponses({
             @ApiResponse(code = 200, message = "블로그게시물 정보 수정성공")
